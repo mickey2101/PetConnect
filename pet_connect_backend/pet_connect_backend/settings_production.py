@@ -48,24 +48,27 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Update CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://petconnect-production-a6f2.up.railway.app/",
-    "http://petconnect-production-3af8.up.railway.app",
+    "https://petconnect-production-a6f2.up.railway.app",
+    "http://petconnect-production-a6f2.up.railway.app",
     "http://localhost:3000",
 ]
 
 # Update CSRF settings for production
 CSRF_TRUSTED_ORIGINS = [
-    "https://petconnect-production-a6f2.up.railway.app/",
-    "http://petconnect-production-3af8.up.railway.app",
+    'https://petconnect-production-a6f2.up.railway.app',
+    'http://petconnect-production-a6f2.up.railway.app',
 ]
 
 # Disable these security settings initially to debug
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
-
+CSRF_COOKIE_HTTPONLY = False 
+CSRF_COOKIE_SAMESITE = 'Lax'
+CSRF_USE_SESSIONS = False
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
+
 
 # Override the secret key with an environment variable
 SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
