@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import apiService from '../utils/apiService';
+import simpleApi from '../utils/simpleApi';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
 import { 
   logLocalAnimalView, 
@@ -10,6 +11,7 @@ import {
   getRecentlyViewedAnimalIds,
   clearLocalAnimalViews
 } from '../utils/localStorageViews';
+import { isProduction } from '../utils/apiConfig';
 import '../css/recommendation_systels.css';
 
 const RecommendationsPage = () => {
@@ -39,8 +41,16 @@ const RecommendationsPage = () => {
         
         // Try to fetch the user's preferences for recommendations
         try {
-          const prefsResponse = await apiService.user.getUserPreferences();
-          console.log('Current user preferences:', prefsResponse);
+          let prefsResponse;
+          
+          // Use different APIs based on environment
+          if (isProduction()) {
+            console.log("Skipping user preferences in production mode");
+            prefsResponse = {};
+          } else {
+            prefsResponse = await apiService.user.getUserPreferences();
+            console.log('Current user preferences:', prefsResponse);
+          }
           
           // Check if preferences have changed
           if (lastPreferencesRef.current) {
@@ -75,7 +85,16 @@ const RecommendationsPage = () => {
         // Fetch recommendations from API
         let validRecommendations = [];
         try {
-          const recommendationsData = await apiService.recommendations.getRecommendations({});
+          let recommendationsData;
+          
+          // Use different approaches for local vs. production
+          if (isProduction()) {
+            console.log("Using simple API (no auth) for recommendations");
+            recommendationsData = await simpleApi.getRecommendations({});
+          } else {
+            recommendationsData = await apiService.recommendations.getRecommendations({});
+          }
+          
           console.log('Received recommendations:', recommendationsData);
           
           // Filter out any undefined items
@@ -101,8 +120,14 @@ const RecommendationsPage = () => {
             // Fetch each animal by ID directly
             const browsedRecsPromises = recentIds.map(async (animalId) => {
               try {
-                // Fetch this specific animal by ID
-                const animalDetails = await apiService.animals.getAnimalDetails(animalId);
+                // Fetch this specific animal by ID - using the proper API for environment
+                let animalDetails;
+                if (isProduction()) {
+                  animalDetails = await simpleApi.getAnimalDetails(animalId);
+                } else {
+                  animalDetails = await apiService.animals.getAnimalDetails(animalId);
+                }
+                
                 console.log(`Fetched animal ${animalId}:`, animalDetails);
                 
                 // Return as a recommendation
@@ -145,67 +170,81 @@ const RecommendationsPage = () => {
           setBrowsedRecommendations([]);
         }
         
-        // First try to fetch recent views from the API
+        // Fetch recent views - use different approach for local vs production
         try {
-          const recentViewsData = await apiService.recommendations.getRecentViews({});
-          console.log('Received recent views from API:', recentViewsData);
+          let recentViewsData = [];
           
-          // Filter out any undefined items in recent views
-          const validRecentViews = Array.isArray(recentViewsData)
-            ? recentViewsData.filter(item => item && item.id)
-            : [];
-          
-          if (validRecentViews.length > 0) {
-            // Store API views
-            const apiViews = validRecentViews;
-            
-            // Also fetch local views and merge them
-            const localRecentIds = getRecentlyViewedAnimalIds(5);
-            const localViews = [];
-            
-            // Get animal details for locally viewed animals not in API views
-            for (const animalId of localRecentIds) {
-              // Check if this animal is already in the API views
-              if (!apiViews.some(view => view.id === animalId)) {
-                try {
-                  const animalDetails = await apiService.animals.getAnimalDetails(animalId);
-                  const viewData = getLocalAnimalViews().find(v => v.animalId === parseInt(animalId));
-                  
-                  localViews.push({
-                    ...animalDetails,
-                    viewed_at: viewData ? viewData.timestamp : new Date().toISOString(),
-                    source: 'local' // Mark as from local storage
-                  });
-                } catch (err) {
-                  console.error(`Error fetching details for local animal ${animalId}:`, err);
-                }
-              }
-            }
-            
-            // Mark API views as from API
-            const markedApiViews = apiViews.map(view => ({
-              ...view,
-              source: 'api'
-            }));
-            
-            // Combine and sort by timestamp
-            const combinedViews = [...markedApiViews, ...localViews]
-              .sort((a, b) => {
-                const aTime = new Date(a.viewed_at || new Date());
-                const bTime = new Date(b.viewed_at || new Date());
-                return bTime - aTime; // Newest first
-              })
-              .slice(0, 5); // Limit to 5 items total
-            
-            setRecentViews(combinedViews);
-            console.log('Combined recent views from API and localStorage:', combinedViews);
-          } else {
-            // If API returned empty array, fall back to local storage
+          if (isProduction()) {
+            console.log("Using localStorage only for recent views in production");
             await fetchLocalRecentViews();
+          } else {
+            // First try to fetch recent views from the API
+            try {
+              recentViewsData = await apiService.recommendations.getRecentViews({});
+              console.log('Received recent views from API:', recentViewsData);
+              
+              // Filter out any undefined items in recent views
+              const validRecentViews = Array.isArray(recentViewsData)
+                ? recentViewsData.filter(item => item && item.id)
+                : [];
+              
+              if (validRecentViews.length > 0) {
+                // Store API views
+                const apiViews = validRecentViews;
+                
+                // Also fetch local views and merge them
+                const localRecentIds = getRecentlyViewedAnimalIds(5);
+                const localViews = [];
+                
+                // Get animal details for locally viewed animals not in API views
+                for (const animalId of localRecentIds) {
+                  // Check if this animal is already in the API views
+                  if (!apiViews.some(view => view.id === animalId)) {
+                    try {
+                      const animalDetails = await apiService.animals.getAnimalDetails(animalId);
+                      const viewData = getLocalAnimalViews().find(v => v.animalId === parseInt(animalId));
+                      
+                      localViews.push({
+                        ...animalDetails,
+                        viewed_at: viewData ? viewData.timestamp : new Date().toISOString(),
+                        source: 'local' // Mark as from local storage
+                      });
+                    } catch (err) {
+                      console.error(`Error fetching details for local animal ${animalId}:`, err);
+                    }
+                  }
+                }
+                
+                // Mark API views as from API
+                const markedApiViews = apiViews.map(view => ({
+                  ...view,
+                  source: 'api'
+                }));
+                
+                // Combine and sort by timestamp
+                const combinedViews = [...markedApiViews, ...localViews]
+                  .sort((a, b) => {
+                    const aTime = new Date(a.viewed_at || new Date());
+                    const bTime = new Date(b.viewed_at || new Date());
+                    return bTime - aTime; // Newest first
+                  })
+                  .slice(0, 5); // Limit to 5 items total
+                
+                setRecentViews(combinedViews);
+                console.log('Combined recent views from API and localStorage:', combinedViews);
+              } else {
+                // If API returned empty array, fall back to local storage
+                await fetchLocalRecentViews();
+              }
+            } catch (viewsError) {
+              console.error('Error fetching recent views from API:', viewsError);
+              // Fallback to local storage views
+              await fetchLocalRecentViews();
+            }
           }
-        } catch (viewsError) {
-          console.error('Error fetching recent views from API:', viewsError);
-          // Fallback to local storage views
+        } catch (error) {
+          console.error('Error handling recent views:', error);
+          // Make sure to fall back to local in case of any errors
           await fetchLocalRecentViews();
         }
         
@@ -235,8 +274,13 @@ const RecommendationsPage = () => {
         const localRecentViews = [];
         for (const animalId of recentIds) {
           try {
-            // Get animal details from API
-            const animalDetails = await apiService.animals.getAnimalDetails(animalId);
+            // Get animal details from appropriate API
+            let animalDetails;
+            if (isProduction()) {
+              animalDetails = await simpleApi.getAnimalDetails(animalId);
+            } else {
+              animalDetails = await apiService.animals.getAnimalDetails(animalId);
+            }
             
             // Find view timestamp from localStorage
             const viewData = getLocalAnimalViews().find(v => v.animalId === parseInt(animalId));
@@ -266,14 +310,21 @@ const RecommendationsPage = () => {
   // Record a view when user clicks on an animal
   const handleAnimalClick = async (animalId) => {
     try {
-      // Try server-side logging but don't wait for it
-      apiService.recommendations.logAnimalView({ animalId }).catch(error => {
-        console.warn('Server-side view logging failed, using local storage only:', error);
-      });
-      
-      // Always log locally as a fallback
-      logLocalAnimalView(animalId);
-      console.log(`Recorded view for animal ${animalId} in localStorage`);
+      // Use different approach for local vs. production
+      if (isProduction()) {
+        // In production, just log locally
+        logLocalAnimalView(animalId);
+        console.log(`Recorded view for animal ${animalId} in localStorage only (production mode)`);
+      } else {
+        // In local dev, try both server and local
+        apiService.recommendations.logAnimalView({ animalId }).catch(error => {
+          console.warn('Server-side view logging failed, using local storage only:', error);
+        });
+        
+        // Always log locally as a fallback
+        logLocalAnimalView(animalId);
+        console.log(`Recorded view for animal ${animalId} in localStorage`);
+      }
       
       // Refresh recommendations and recent views after recording a view
       setTimeout(() => {
@@ -403,6 +454,19 @@ const RecommendationsPage = () => {
             Reset Views
           </button>
         </p>
+        
+        {/* Environment Notice in Production */}
+        {isProduction() && (
+          <div className="environment-notice" style={{
+            padding: '10px', 
+            margin: '10px 0', 
+            backgroundColor: '#f8f9fa', 
+            borderRadius: '4px',
+            border: '1px solid #dee2e6'
+          }}>
+            <p>Note: Some personalized features require authentication. For the full experience with personalized recommendations, please use the local version.</p>
+          </div>
+        )}
         
         {/* Unified Recommendations Section */}
         <div className="unified-recommendations">

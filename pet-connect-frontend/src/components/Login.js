@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../utils/AuthContext';
+import { isProduction } from '../utils/apiConfig';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -69,6 +70,20 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card">
         <h2>Login to Pet Connect</h2>
+        
+        {/* Show production warning if in production */}
+        {isProduction() && (
+          <div className="environment-notice" style={{
+            padding: '10px', 
+            margin: '10px 0', 
+            backgroundColor: '#fff3cd', 
+            borderRadius: '4px',
+            border: '1px solid #ffeeba',
+            color: '#856404'
+          }}>
+            <p><strong>Note:</strong> Login functionality may be limited in the production environment due to CORS restrictions. For full functionality, please use the local version.</p>
+          </div>
+        )}
         
         {message && (
           <div className="success-message">

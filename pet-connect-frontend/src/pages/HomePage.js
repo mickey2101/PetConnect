@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
 import { fetchWithCsrf } from '../utils/csrfUtils';
+import simpleApi from '../utils/simpleApi';
+import { isProduction } from '../utils/apiConfig';
 
 const HomePage = () => {
   const [animals, setAnimals] = useState([]);
@@ -21,33 +23,41 @@ const HomePage = () => {
       try {
         setLoading(true);
 
-        // Construct query params from filters
-        const queryParams = new URLSearchParams();
-
-        Object.entries(filters).forEach(([key, value]) => {
-          if (value) queryParams.append(key, value);
-        });
-
-        // Use fetchWithCsrf instead of direct fetch to handle environments
-        console.log("Fetching animals for homepage with filters:", filters);
-        const response = await fetchWithCsrf(`animals/?${queryParams.toString()}`, {
-          credentials: "include",
-        });
-
-        if (!response.ok) throw new Error('Failed to fetch animals');
-        const data = await response.json();
-
-        // Handle different response formats
-        if (Array.isArray(data)) {
-          setAnimals(data);
-        } else if (data.animals && Array.isArray(data.animals)) {
-          // Check for data in 'animals' property
-          setAnimals(data.animals);
+        let fetchedAnimals = [];
+        
+        // Use different approaches for local vs. production
+        if (isProduction()) {
+          // In production, use the simplified API without auth
+          console.log("Using simple API (no auth) for production");
+          fetchedAnimals = await simpleApi.getAnimals(filters);
         } else {
-          console.warn('Unexpected format:', data);
-          setAnimals([]);
-        }
+          // Locally, use fetchWithCsrf with auth
+          console.log("Using authenticated API call for local");
+          
+          // Construct query params from filters
+          const queryParams = new URLSearchParams();
+          Object.entries(filters).forEach(([key, value]) => {
+            if (value) queryParams.append(key, value);
+          });
 
+          const response = await fetchWithCsrf(`animals/?${queryParams.toString()}`, {
+            credentials: "include",
+          });
+
+          if (!response.ok) throw new Error('Failed to fetch animals');
+          const data = await response.json();
+
+          if (Array.isArray(data)) {
+            fetchedAnimals = data;
+          } else if (data.animals && Array.isArray(data.animals)) {
+            fetchedAnimals = data.animals;
+          } else {
+            console.warn('Unexpected format:', data);
+            fetchedAnimals = [];
+          }
+        }
+        
+        setAnimals(fetchedAnimals);
         setError(null);
       } catch (err) {
         console.error('Error fetching animals:', err);
@@ -57,6 +67,7 @@ const HomePage = () => {
         setLoading(false);
       }
     };
+
 
     fetchAnimals();
   }, [filters]);

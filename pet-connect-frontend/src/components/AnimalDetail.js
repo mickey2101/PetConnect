@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from '../utils/apiService';
+import simpleApi from '../utils/simpleApi';
 import { logLocalAnimalView } from '../utils/localStorageViews';
 import '../css/animalDetail.css';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
+import { isProduction } from '../utils/apiConfig';
 
 const AnimalDetail = () => {
   const { animalId } = useParams();
@@ -25,8 +27,16 @@ const AnimalDetail = () => {
       try {
         setLoading(true);
         
-        // Fetch animal details
-        const animalData = await apiService.animals.getAnimalDetails(animalId);
+        // Fetch animal details - use different methods for local vs. production
+        let animalData;
+        if (isProduction()) {
+          console.log('Using simple API (no auth) for production');
+          animalData = await simpleApi.getAnimalDetails(animalId);
+        } else {
+          console.log('Using authenticated API call for local');
+          animalData = await apiService.animals.getAnimalDetails(animalId);
+        }
+        
         console.log('Animal details:', animalData);
         setAnimal(animalData);
         
@@ -34,13 +44,21 @@ const AnimalDetail = () => {
         if (!viewLogged && animalId) {
           try {
             // Try server-side logging but don't wait for success
-            apiService.recommendations.logAnimalView({ animalId }).catch(error => {
-              console.warn('Server-side view logging failed, using local storage only:', error);
-            });
+            if (isProduction()) {
+              // In production, just log locally
+              logLocalAnimalView(animalId, animalData);
+              console.log(`Recorded view for animal ${animalId} in localStorage only (production mode)`);
+            } else {
+              // In local dev, try both server and local
+              apiService.recommendations.logAnimalView({ animalId }).catch(error => {
+                console.warn('Server-side view logging failed, using local storage only:', error);
+              });
+              
+              // Always log to localStorage as a reliable backup
+              logLocalAnimalView(animalId, animalData);
+              console.log(`Recorded view for animal ${animalId} in localStorage`);
+            }
             
-            // Always log to localStorage as a reliable backup
-            logLocalAnimalView(animalId, animalData);
-            console.log(`Recorded view for animal ${animalId} in localStorage`);
             setViewLogged(true);
           } catch (viewError) {
             console.error('Error logging animal view:', viewError);
@@ -50,10 +68,19 @@ const AnimalDetail = () => {
         
         // Fetch recommendations for this animal
         try {
-          const recommendationsData = await apiService.recommendations.getRecommendations({
-            animalId: animalId,
-            limit: 3
-          });
+          let recommendationsData;
+          if (isProduction()) {
+            recommendationsData = await simpleApi.getRecommendations({
+              animalId: animalId,
+              limit: 3
+            });
+          } else {
+            recommendationsData = await apiService.recommendations.getRecommendations({
+              animalId: animalId,
+              limit: 3
+            });
+          }
+          
           console.log('Related recommendations:', recommendationsData);
           
           // Filter out any undefined items and the current animal
@@ -127,14 +154,21 @@ const AnimalDetail = () => {
   // Record a view when clicking on a similar animal
   const handleSimilarAnimalClick = async (animalId) => {
     try {
-      // Try server-side logging but don't wait for success
-      apiService.recommendations.logAnimalView({ animalId }).catch(error => {
-        console.warn('Server-side view logging failed, using local storage only:', error);
-      });
-      
-      // Always log to localStorage
-      logLocalAnimalView(animalId);
-      console.log(`Recorded view for similar animal ${animalId} in localStorage`);
+      // Use different approaches for local vs. production
+      if (isProduction()) {
+        // In production, just log locally
+        logLocalAnimalView(animalId);
+        console.log(`Recorded view for similar animal ${animalId} in localStorage only (production mode)`);
+      } else {
+        // In local dev, try both server and local
+        apiService.recommendations.logAnimalView({ animalId }).catch(error => {
+          console.warn('Server-side view logging failed, using local storage only:', error);
+        });
+        
+        // Always log to localStorage
+        logLocalAnimalView(animalId);
+        console.log(`Recorded view for similar animal ${animalId} in localStorage`);
+      }
     } catch (error) {
       console.error('Error logging animal view:', error);
     }
