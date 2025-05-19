@@ -9,7 +9,7 @@ from .settings import *
 DEBUG = False
 
 # Allow all hosts - update with your specific domain in production
-ALLOWED_HOSTS = ['petconnect-production-3af8.up.railway.app', '*']
+ALLOWED_HOSTS = ['https://petconnect-production-a6f2.up.railway.app/', '*']
 
 # Static files configuration
 STATIC_URL = '/static/'
@@ -48,14 +48,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Update CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://petconnect-production-3af8.up.railway.app",
+    "https://petconnect-production-a6f2.up.railway.app/",
     "http://petconnect-production-3af8.up.railway.app",
     "http://localhost:3000",
 ]
 
 # Update CSRF settings for production
 CSRF_TRUSTED_ORIGINS = [
-    "https://petconnect-production-3af8.up.railway.app",
+    "https://petconnect-production-a6f2.up.railway.app/",
     "http://petconnect-production-3af8.up.railway.app",
 ]
 
