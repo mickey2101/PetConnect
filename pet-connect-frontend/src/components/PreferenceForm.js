@@ -4,7 +4,6 @@ import { fetchWithCsrf } from '../utils/csrfUtils';
 import { useAuth } from '../utils/AuthContext';
 
 const PreferenceForm = () => {
-  const navigate = useNavigate();
   const { currentUser, checkAuthStatus } = useAuth();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
