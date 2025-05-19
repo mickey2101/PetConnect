@@ -1,0 +1,101 @@
+Pet ID,Name,Animal Type,Type & Breed,Years,Sex,Size,Energy Level,Medical History,Vaccinated,Neutered/Spayed,Temperament,Branch,Adoption Status,Child Friendly,Cat Friendly,Dog Friendly
+BDH-0001,Fiona,Bird,Bird - Patagonian Conure,0,Male,Small,Very High,"Chronic condition, managed with medication",No,No,Snuggle expert,Brands Hatch,Adopted,No,No,No
+BDH-0002,Winston,Dog,Dog - Labrador Retriever,10,Male,Large,High,"Healthy, vaccinated",Yes,No,Water-loving,Brands Hatch,Adopted,Yes,Yes,Yes
+BDH-0003,Simba,Cat,Cat - Korat,1,Female,Large,Medium,"Hypothyroidism, on medication",No,No,Cuddle buddy,Brands Hatch,Available for Adoption,Yes,Unknown,No
+BDH-0004,Phoebe,Small Animal,Small Animal - Angora Rabbit,6,Male,Tiny,Low,"Diabetes, managed with insulin",No,No,Chill and relaxed,Brands Hatch,Reserved,Unknown,No,Unknown
+BDH-0005,Oscar,Cat,Cat - Burmilla,11,Female,Medium,Low,"Healthy, recently spayed",No,Yes,Needs yard space,London,Adopted,No,No,No
+BDH-0006,Blossom,Bird,Bird - Cockatiel Pied,8,Male,Small,Medium,"Diabetes, managed with insulin",No,No,Loves car rides,Old Windsor,Adopted,Yes,Yes,Yes
+BDH-0007,Otis,Dog,Dog - Dalmatian,4,Male,Small,High,Partial hearing loss,No,No,Watches TV with you,Brands Hatch,Reserved,Yes,Unknown,Yes
+BDH-0008,Leia,Reptile,Reptile - Uromastyx,10,Male,Small,Very Low,Senior with arthritis,No,No,Vocal and expressive,Old Windsor,In Foster Care,Yes,Yes,Unknown
+BDH-0009,Rex,Dog,Dog - Basset Hound,4,Male,Medium,High,"Fully vaccinated, excellent health",Yes,No,Anxious in new situations,Old Windsor,Available for Adoption,No,No,No
+BDH-0010,Ace,Reptile,Reptile - Poison Dart Frog,6,Female,Medium,Very Low,"Needs dental work, otherwise healthy",No,No,Protective instincts,Old Windsor,Available for Adoption,No,Unknown,No
+BDH-0011,Willow,Reptile,Reptile - King Snake,11,Female,Medium,Low,"Healthy, recently spayed",No,Yes,Territorial,London,Available for Adoption,Yes,Unknown,Unknown
+BDH-0012,Baby,Reptile,Reptile - Red-footed Tortoise,8,Female,Tiny,Low,Partial hearing loss,No,No,Intelligent and trainable,Old Windsor,In Foster Care,Yes,Yes,Unknown
+BDH-0013,Molly,Dog,Dog - Akita,5,Male,Large,High,"Chronic condition, managed with medication",No,No,Lap pet,Old Windsor,In Foster Care,Unknown,Yes,Unknown
+BDH-0014,Sammy,Cat,Cat - Nebelung,7,Female,Small,Medium,"Minor health issues, vaccinated",Yes,No,Independent nature,Brands Hatch,Available for Adoption,Unknown,Unknown,Yes
+BDH-0015,Chloe,Dog,Dog - Welsh Corgi,2,Male,Large,Very Low,"FeLV+ (cats), otherwise healthy",No,No,Experienced owner preferred,London,Available for Adoption,No,No,No
+BDH-0016,Buster,Reptile,Reptile - Veiled Chameleon,4,Female,Small,Very Low,"Heart murmur, monitor only",No,No,Toy motivated,Old Windsor,Available for Adoption,Unknown,Yes,No
+BDH-0017,Ruby,Dog,Dog - Cocker Spaniel,6,Male,Medium,Low,Partial hearing loss,No,No,Lap pet,Brands Hatch,In Foster Care,No,Unknown,Yes
+BDH-0018,Sophie,Dog,Dog - Scottish Terrier,6,Female,Small,Medium,Blind but adapts well,No,No,Enjoys playtime,Old Windsor,Adopted,Unknown,No,Unknown
+BDH-0019,Phoebe,Dog,Dog - Miniature Schnauzer,4,Female,Medium,Very High,Senior with arthritis,No,No,Follows you everywhere,London,Available for Adoption,Yes,Yes,Yes
+BDH-0020,Gus,Bird,Bird - Recessive Pied Budgie,0,Female,Tiny,Very High,"Diabetes, managed with insulin",No,No,Follows you everywhere,Brands Hatch,Available for Adoption,Unknown,Yes,Yes
+BDH-0021,Diamond,Reptile,Reptile - Boa Constrictor,9,Female,Small,Low,"Hyperthyroidism, on medication",No,No,Good for first-time owners,Old Windsor,In Foster Care,Unknown,No,Yes
+BDH-0022,Minnie,Cat,Cat - Burmese,9,Female,Medium,Low,"Good health, not neutered",No,Yes,Enjoys being brushed,London,Reserved,No,No,No
+BDH-0023,Sasha,Dog,Dog - Lhasa Apso,10,Male,Medium,Very Low,"Needs dental work, otherwise healthy",No,No,Energetic player,Brands Hatch,Available for Adoption,No,No,Unknown
+BDH-0024,Holly,Small Animal,Small Animal - Ebony Chinchilla,9,Female,Small,Very Low,"FeLV+ (cats), otherwise healthy",No,No,Fearful of loud noises,Old Windsor,Adopted,Unknown,No,Unknown
+BDH-0025,Jackson,Reptile,Reptile - Rainbow Boa,7,Male,Small,Low,"Underweight, needs special diet",No,No,Perfect apartment pet,Old Windsor,Adopted,Yes,Unknown,No
+BDH-0026,Olive,Reptile,Reptile - Uromastyx,11,Female,Medium,Low,"FIV+ (cats), otherwise healthy",No,No,Chill and relaxed,Brands Hatch,Reserved,Yes,Unknown,Unknown
+BDH-0027,Skye,Small Animal,Small Animal - Mini Rex Rabbit,2,Female,Small,Medium,"Recovering from surgery, otherwise healthy",No,No,Sunbathing enthusiast,Old Windsor,In Foster Care,Yes,Unknown,Yes
+BDH-0028,Ruby,Cat,Cat - Ocicat,8,Male,Small,Medium,"Recovering from injury, making progress",No,No,Adventure buddy,London,Adopted,Yes,No,Unknown
+BDH-0029,Oreo,Small Animal,Small Animal - American Fuzzy Lop,0,Male,Tiny,Very Low,"Metabolic disorder, special diet",No,No,Separation anxiety,London,In Foster Care,Unknown,No,Unknown
+BDH-0030,Emma,Reptile,Reptile - Boa Constrictor,10,Male,Medium,Very Low,"Special needs, but good quality of life",No,No,Cautious with strangers,Brands Hatch,In Foster Care,Yes,Unknown,Unknown
+BDH-0031,Cooper,Reptile,Reptile - Ackie Monitor,12,Male,Medium,Very Low,"Minor health issues, vaccinated",Yes,No,Intelligent and trainable,Old Windsor,Reserved,No,Yes,No
+BDH-0032,Sam,Small Animal,Small Animal - Rex Rabbit,7,Male,Tiny,Very Low,"Hypothyroidism, on medication",No,No,Intelligent and trainable,London,In Foster Care,No,Unknown,Unknown
+BDH-0033,Toby,Cat,Cat - Singapura,2,Female,Medium,Low,"Recovering from surgery, otherwise healthy",No,No,"Timid, needs patience",Brands Hatch,In Foster Care,Unknown,No,Yes
+BDH-0034,Molly,Bird,Bird - American Budgie,10,Female,Tiny,High,"Needs dental work, otherwise healthy",No,No,Follows you everywhere,Brands Hatch,Adopted,Unknown,Yes,Yes
+BDH-0035,Sadie,Bird,Bird - Palm Cockatoo,6,Female,Medium,Very High,"Special needs, but good quality of life",No,No,Adventure buddy,London,Adopted,No,Unknown,No
+BDH-0036,Sasha,Reptile,Reptile - Clawed Frog,5,Female,Tiny,Very Low,"FIV+ (cats), otherwise healthy",No,No,Quiet and reserved,Old Windsor,In Foster Care,Yes,Unknown,Yes
+BDH-0037,Emma,Cat,Cat - Havana Brown,6,Male,Large,Low,Partial hearing loss,No,No,Cautious with strangers,London,Available for Adoption,Unknown,Unknown,No
+BDH-0038,Kiki,Small Animal,Small Animal - Rex Rat,5,Male,Tiny,Very High,"Hypothyroidism, on medication",No,No,Not good with cats,London,Reserved,Unknown,Yes,No
+BDH-0039,Rufus,Bird,Bird - Cockatiel Pearl,2,Male,Small,Medium,"Hypothyroidism, on medication",No,No,Intelligent and trainable,Old Windsor,Adopted,Unknown,No,Yes
+BDH-0040,Leia,Reptile,Reptile - Garter Snake,3,Male,Small,Very Low,"Seizure disorder, controlled with medication",No,No,House trained,Old Windsor,In Foster Care,No,Unknown,Yes
+BDH-0041,Buster,Dog,Dog - Welsh Corgi,2,Female,Medium,High,"Recovering from surgery, otherwise healthy",No,No,Energetic player,Brands Hatch,In Foster Care,Unknown,Yes,Unknown
+BDH-0042,Simba,Dog,Dog - Basset Hound,1,Female,Medium,Low,"Fully vaccinated, excellent health",Yes,No,Very affectionate,London,In Foster Care,Unknown,Unknown,Yes
+BDH-0043,Luna,Dog,Dog - Beagle,5,Male,Medium,Very High,"Recovering from surgery, otherwise healthy",No,No,Adventure buddy,Old Windsor,Adopted,No,Unknown,No
+BDH-0044,Maggie,Small Animal,Small Animal - Fancy Mouse,9,Female,Tiny,Very High,"Seizure disorder, controlled with medication",No,No,Social with other animals,Old Windsor,Adopted,No,Unknown,Yes
+BDH-0045,Cash,Bird,Bird - Cockatiel Pearl,10,Male,Small,Very High,"Healthy, neutered and vaccinated",Yes,Yes,Inquisitive explorer,Brands Hatch,In Foster Care,Yes,Unknown,No
+BDH-0046,Willow,Bird,Bird - Budgerigar,1,Female,Small,Very High,"Fully vaccinated, excellent health",Yes,No,Needs yard space,London,Available for Adoption,Yes,Unknown,Unknown
+BDH-0047,Molly,Cat,Cat - Seychellois,5,Male,Medium,Medium,Deaf but adapts well,No,No,Separation anxiety,London,Reserved,Unknown,No,Unknown
+BDH-0048,Archie,Reptile,Reptile - Solomon Island Skink,2,Male,Medium,Very Low,"Vision impaired, adapts well",No,No,Fearful of loud noises,Brands Hatch,Adopted,Yes,Unknown,Yes
+BDH-0049,Izzy,Small Animal,Small Animal - Sugar Glider,12,Male,Small,Very Low,"Hyperthyroidism, on medication",No,No,Protective instincts,London,Available for Adoption,Yes,Unknown,No
+BDH-0050,Ruby,Cat,Cat - Bombay,9,Female,Large,Medium,"Needs dental work, otherwise healthy",No,No,Needs basic training,Old Windsor,Available for Adoption,Unknown,Yes,No
+BDH-0051,Jackson,Bird,Bird - Patagonian Conure,0,Female,Tiny,Very High,"Special needs, but good quality of life",No,No,Enjoys playtime,Old Windsor,Reserved,Unknown,No,Yes
+BDH-0052,Rex,Dog,Dog - Leonberger,3,Male,Medium,Very High,"Seizure disorder, controlled with medication",No,No,Follows you everywhere,London,Adopted,Yes,Unknown,No
+BDH-0053,Prince,Cat,Cat - Ragamuffin,4,Female,Small,Medium,"Needs dental work, otherwise healthy",No,No,Shy but affectionate,London,Available for Adoption,No,Yes,No
+BDH-0054,Rocky,Cat,Cat - Javanese,10,Female,Large,Low,Deaf but adapts well,No,No,Toy motivated,London,In Foster Care,Yes,Yes,Unknown
+BDH-0055,Ranger,Reptile,Reptile - Red-eared Slider,7,Male,Medium,Very Low,"FeLV+ (cats), otherwise healthy",No,No,Quiet and reserved,Old Windsor,Adopted,No,Yes,No
+BDH-0056,Trixie,Bird,Bird - Mitred Conure,4,Female,Small,High,"Fully vaccinated, excellent health",Yes,No,"Timid, needs patience",Brands Hatch,Reserved,Yes,No,No
+BDH-0057,Prince,Small Animal,Small Animal - Texel Guinea Pig,2,Male,Tiny,Very Low,"FeLV+ (cats), otherwise healthy",No,No,Chill and relaxed,Brands Hatch,Adopted,Yes,Yes,No
+BDH-0058,Tucker,Cat,Cat - Balinese,0,Female,Large,Medium,"Healthy, recently spayed",No,Yes,Water-loving,London,Adopted,Yes,No,Unknown
+BDH-0059,Pixie,Reptile,Reptile - Sulcata Tortoise,11,Male,Tiny,Very Low,"Good health, needs vaccines",No,No,"High energy, needs exercise",London,Available for Adoption,Unknown,Unknown,No
+BDH-0060,Lucy,Bird,Bird - Yorkshire Canary,12,Male,Small,Very High,"Metabolic disorder, special diet",No,No,Needs yard space,Old Windsor,In Foster Care,Yes,Yes,Unknown
+BDH-0061,Mocha,Bird,Bird - Ringneck Dove,6,Female,Tiny,High,Deaf but adapts well,No,No,Selective with friends,Old Windsor,Available for Adoption,No,No,Unknown
+BDH-0062,Belle,Cat,Cat - Highlander,7,Female,Large,Medium,"FeLV+ (cats), otherwise healthy",No,No,Loves attention,Brands Hatch,Reserved,Unknown,Unknown,No
+BDH-0063,Ozzy,Small Animal,Small Animal - Mini Satin,1,Male,Tiny,High,"Chronic condition, managed with medication",No,No,House trained,Brands Hatch,Available for Adoption,Yes,No,No
+BDH-0064,Shadow,Bird,Bird - Canary,3,Male,Small,Very High,"Healthy, vaccinated",Yes,No,Shy but affectionate,London,Adopted,Yes,Unknown,No
+BDH-0065,Jackson,Reptile,Reptile - Carpet Python,10,Male,X-Large,Low,"Healthy, recently spayed",No,Yes,Needs basic training,Old Windsor,In Foster Care,Yes,No,Yes
+BDH-0066,Copper,Small Animal,Small Animal - Dwarf Rabbit,11,Female,Tiny,Low,"Good health, not neutered",No,Yes,Independent nature,Old Windsor,Adopted,Unknown,Yes,No
+BDH-0067,Titan,Cat,Cat - Ragdoll,7,Male,Small,Low,"Healthy, recently spayed",No,Yes,Good for first-time owners,Brands Hatch,Adopted,Yes,No,No
+BDH-0068,Jasper,Dog,Dog - Basset Hound,12,Male,Small,Low,"Hypothyroidism, on medication",No,No,Inquisitive explorer,Brands Hatch,Available for Adoption,No,No,No
+BDH-0069,Maverick,Small Animal,Small Animal - Palomino Rabbit,4,Female,Small,Very Low,Healthy with seasonal allergies,No,No,Enjoys playtime,Brands Hatch,In Foster Care,Yes,Yes,Unknown
+BDH-0070,Titan,Dog,Dog - Newfoundland,5,Male,Small,High,"Diabetes, managed with insulin",No,No,Cautious with strangers,London,In Foster Care,Yes,Unknown,Yes
+BDH-0071,Chloe,Dog,Dog - Pekingese,1,Male,Small,Medium,"Hypothyroidism, on medication",No,No,Adventure buddy,Old Windsor,In Foster Care,Unknown,No,No
+BDH-0072,Tank,Bird,Bird - Yorkshire Canary,9,Female,Small,High,Partial hearing loss,No,No,"Timid, needs patience",London,Available for Adoption,Unknown,No,No
+BDH-0073,Minnie,Reptile,Reptile - African Bullfrog,11,Male,Medium,Low,Senior with arthritis,No,No,Loves attention,Old Windsor,Adopted,Unknown,No,Yes
+BDH-0074,Winston,Bird,Bird - Gang-gang Cockatoo,6,Female,Medium,Very High,"Healthy, recently spayed",No,Yes,Enjoys being brushed,London,In Foster Care,Yes,Unknown,Unknown
+BDH-0075,Prince,Reptile,Reptile - Green Iguana,11,Female,Medium,Very Low,"FIV+ (cats), otherwise healthy",No,No,Watches TV with you,London,Adopted,Unknown,Unknown,No
+BDH-0076,Bentley,Dog,Dog - Airedale Terrier,7,Female,Tiny,High,Senior with arthritis,No,No,Enjoys being brushed,Brands Hatch,Available for Adoption,Unknown,No,Unknown
+BDH-0077,Barney,Dog,Dog - Australian Cattle Dog,6,Male,Large,Medium,Blind but adapts well,No,No,Enjoys playtime,London,Reserved,Unknown,Unknown,Unknown
+BDH-0078,Emma,Cat,Cat - Lambkin,3,Male,Large,Medium,"Allergies, managed with medication",No,No,Enjoys being held,Old Windsor,In Foster Care,No,Yes,No
+BDH-0079,Abby,Reptile,Reptile - Burmese Python,7,Male,X-Large,Low,"Special needs, but good quality of life",No,No,Toy motivated,Brands Hatch,In Foster Care,No,Unknown,Yes
+BDH-0080,Buddy,Small Animal,Small Animal - Satin Rabbit,7,Female,Tiny,Very Low,"Dental issues, needs soft food",No,No,Fearful of loud noises,London,Available for Adoption,Unknown,Unknown,Unknown
+BDH-0081,Lady,Reptile,Reptile - Whites Tree Frog,7,Female,Small,Low,"Good health, needs vaccines",No,No,Needs basic training,Old Windsor,In Foster Care,Yes,Yes,No
+BDH-0082,Whiskey,Reptile,Reptile - Green Iguana,7,Female,Medium,Low,"Heart murmur, monitor only",No,No,Food motivated,London,Reserved,No,No,Yes
+BDH-0083,Mia,Dog,Dog - Brussels Griffon,7,Male,Medium,Medium,"Healthy, vaccinated",Yes,No,Calm and laid-back,Brands Hatch,Reserved,Unknown,Yes,No
+BDH-0084,Violet,Dog,Dog - Scottish Terrier,0,Female,Small,Very High,"Underweight, needs special diet",No,No,Intelligent and trainable,Old Windsor,In Foster Care,Unknown,Unknown,Unknown
+BDH-0085,Mocha,Cat,Cat - Cheetoh,0,Male,Small,Low,"FIV+ (cats), otherwise healthy",No,No,Crate trained,Old Windsor,Available for Adoption,No,No,Yes
+BDH-0086,Cooper,Dog,Dog - Lhasa Apso,1,Male,Large,Low,"Underweight, needs special diet",No,No,Quiet and reserved,Old Windsor,Available for Adoption,Unknown,Unknown,No
+BDH-0087,Bailey,Dog,Dog - Gordon Setter,0,Male,Medium,Very Low,"Recovering from surgery, otherwise healthy",No,No,Calm and laid-back,Brands Hatch,Available for Adoption,Yes,No,No
+BDH-0088,Prince,Reptile,Reptile - Argentine Tegu,5,Female,Small,Low,"Healthy, neutered and vaccinated",Yes,Yes,Crate trained,Old Windsor,In Foster Care,No,Yes,Unknown
+BDH-0089,Baby,Reptile,Reptile - Red Tegu,12,Female,Small,Very Low,"Hypothyroidism, on medication",No,No,Protective instincts,Brands Hatch,Available for Adoption,No,No,Yes
+BDH-0090,Fiona,Reptile,Reptile - Alligator Snapping Turtle,7,Male,Medium,Very Low,"Good health, not neutered",No,Yes,Very affectionate,Old Windsor,Adopted,Yes,Unknown,Yes
+BDH-0091,Barney,Small Animal,Small Animal - Palomino Rabbit,1,Male,Tiny,Very High,"Dental issues, needs soft food",No,No,Enjoys being brushed,Old Windsor,In Foster Care,No,Unknown,Yes
+BDH-0092,Apollo,Bird,Bird - Blue-throated Macaw,0,Female,Large,High,"Metabolic disorder, special diet",No,No,Perfect apartment pet,London,In Foster Care,Yes,Yes,No
+BDH-0093,Atlas,Reptile,Reptile - Blue Tegu,3,Female,Medium,Very Low,Senior with arthritis,No,No,Toy motivated,London,Available for Adoption,No,Unknown,Yes
+BDH-0094,Roxy,Bird,Bird - Severe Macaw,9,Female,Medium,Medium,"Healthy, vaccinated",Yes,No,Selective with friends,Old Windsor,Reserved,Yes,Unknown,Unknown
+BDH-0095,Walter,Bird,Bird - Black-masked Lovebird,12,Female,Tiny,Very High,"FeLV+ (cats), otherwise healthy",No,No,Confident and bold,London,Available for Adoption,No,No,Yes
+BDH-0096,Otis,Dog,Dog - Bulldog,12,Female,Medium,Medium,Blind but adapts well,No,No,Perfect apartment pet,Old Windsor,In Foster Care,Unknown,Yes,Unknown
+BDH-0097,Oscar,Cat,Cat - New Zealand Longhair,1,Female,Medium,Low,"Good health, needs vaccines",No,No,Water-loving,Old Windsor,In Foster Care,Unknown,Unknown,No
+BDH-0098,Lily,Bird,Bird - Recessive Pied Budgie,1,Female,Small,Very High,"Good health, needs vaccines",No,No,Perfect apartment pet,Brands Hatch,Adopted,Unknown,Unknown,Unknown
+BDH-0099,Sam,Cat,Cat - Thai Lilac,12,Female,Small,Low,"Heart murmur, monitor only",No,No,Perfect apartment pet,Brands Hatch,Available for Adoption,Yes,Unknown,Yes
+BDH-0100,Lady,Cat,Cat - Dwelf,9,Male,Small,Low,"Allergies, managed with medication",No,No,Anxious in new situations,Old Windsor,Available for Adoption,Yes,Yes,No

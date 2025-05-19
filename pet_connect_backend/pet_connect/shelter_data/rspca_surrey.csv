@@ -1,0 +1,101 @@
+Animal ID,Name,Species,Breed Type,Age,Gender,Size,Energy Level,Health,Behavior,Location,Availability,Good with Kids,Good with Cats,Good with Dogs
+RSPCA-0001,Leia,Reptile,Whites Tree Frog,1.5 years,Female,Small,Low,"Hyperthyroidism, on medication",Loves car rides,Surrey Branch,Available,Yes,Yes,Unknown
+RSPCA-0002,Jax,Bird,Abyssinian Lovebird,4 y/o,F,Tiny,High,"Seizure disorder, controlled with medication",Water-loving,London Branch,Quarantine,No,No,No
+RSPCA-0003,Samson,Dog,Border Terrier,3.10 years,F,Tiny,Very High,"Chronic condition, managed with medication",Good for first-time owners,Hampshire Branch,Quarantine,Yes,Unknown,Unknown
+RSPCA-0004,Maya,Bird,Green-winged Macaw,2y 7m,Male,Medium,Medium,"Good health, needs vaccines",Enjoys fetch games,Surrey Branch,Available,No,No,Unknown
+RSPCA-0005,Pepper,Reptile,Clawed Frog,13 y/o,F,Small,Very Low,"Underweight, needs special diet",Snuggle expert,Kent Branch,Medical Hold,No,No,Yes
+RSPCA-0006,Charlie,Dog,Australian Shepherd,5 y/o,M,Medium,Very High,"Heartworm positive, undergoing treatment",Loyal and devoted,Kent Branch,Medical Hold,Yes,Unknown,Yes
+RSPCA-0007,Stella,Bird,Gouldian Finch,1y 10m,F,Small,High,"Good health, not neutered",Protective instincts,London Branch,Quarantine,Yes,No,No
+RSPCA-0008,Jasper,Small Animal,Netherland Dwarf Rabbit,2y 0m,Male,Tiny,Very High,"Good health, not neutered",Water-loving,London Branch,Pending,Yes,Unknown,Unknown
+RSPCA-0009,Coco,Dog,Xoloitzcuintli,1 years 9 months,Male,Medium,High,"Hyperthyroidism, on medication",Very affectionate,Surrey Branch,Medical Hold,Yes,Yes,Unknown
+RSPCA-0010,Milo,Small Animal,Rex Rat,7.0 years,F,Tiny,High,"Underweight, needs special diet",Very affectionate,Hampshire Branch,Adopted,Yes,Yes,No
+RSPCA-0011,Tucker,Small Animal,Tan Rabbit,4y 4m,Male,Tiny,Low,Blind but adapts well,"High energy, needs exercise",Hampshire Branch,Adopted,Unknown,No,Unknown
+RSPCA-0012,Angel,Cat,Sphynx,2y 2m,M,Small,Medium,"Underweight, needs special diet",Watches TV with you,Surrey Branch,Pending,Unknown,Yes,Yes
+RSPCA-0013,Dixie,Cat,Egyptian Mau,2.0 years,Female,Small,Low,"Hypothyroidism, on medication",Adventure buddy,London Branch,Available,Yes,Yes,Yes
+RSPCA-0014,Pearl,Small Animal,Black Sable Ferret,11 y/o,F,Tiny,Low,"Good health, not neutered",Energetic player,Surrey Branch,Foster Care,Unknown,Unknown,Unknown
+RSPCA-0015,Prince,Dog,Golden Retriever,3y 1m,M,Medium,Very High,"Allergies, managed with medication",Water-loving,Hampshire Branch,Adopted,No,Unknown,Yes
+RSPCA-0016,Scout,Bird,Macaw,4.1 years,F,Medium,Medium,Partial hearing loss,Snuggle expert,Kent Branch,Pending,Unknown,Unknown,Unknown
+RSPCA-0017,Roxy,Reptile,Milk Snake,5.10 years,Male,Small,Low,"Heart murmur, monitor only",Separation anxiety,Kent Branch,Pending,Yes,No,Yes
+RSPCA-0018,Milo,Bird,Yorkshire Canary,3 y/o,Female,Small,Medium,Blind but adapts well,Independent nature,London Branch,Pending,No,Yes,Yes
+RSPCA-0019,Tank,Reptile,Newt,0 y/o,Male,Tiny,Low,Partial hearing loss,Playful and curious,London Branch,Available,Unknown,Unknown,Yes
+RSPCA-0020,Precious,Bird,Masked Lovebird,2.4 years,Female,Small,High,"Healthy, vaccinated",Anxious in new situations,Kent Branch,Adopted,Yes,No,Unknown
+RSPCA-0021,Scout,Cat,Burmese,0.9 years,Female,Medium,Medium,"FIV+ (cats), otherwise healthy",Watches TV with you,Hampshire Branch,Pending,No,Yes,No
+RSPCA-0022,Max,Dog,Beagle,5 years 2 months,Male,Large,Low,"Good health, not neutered",Follows you everywhere,London Branch,Pending,Unknown,Yes,Yes
+RSPCA-0023,Izzy,Bird,Palm Cockatoo,1 y/o,Female,Large,High,"Special needs, but good quality of life",Snuggle expert,Surrey Branch,Adopted,Yes,Unknown,Unknown
+RSPCA-0024,Teddy,Small Animal,White Chinchilla,1 years 10 months,Male,Tiny,Very Low,"Healthy, recently spayed",Vocal and expressive,Hampshire Branch,Foster Care,Unknown,Unknown,Yes
+RSPCA-0025,Copper,Reptile,Green Anole,4 y/o,Male,Tiny,Very Low,Partial hearing loss,Selective with friends,Surrey Branch,Available,Yes,No,Unknown
+RSPCA-0026,Sunny,Cat,Chausie,0y 9m,Female,Small,Medium,"Heartworm positive, undergoing treatment",Enjoys fetch games,Kent Branch,Pending,Unknown,Yes,Yes
+RSPCA-0027,Leia,Small Animal,Teasel Guinea Pig,0 years 8 months,F,Small,Low,"Healthy, neutered and vaccinated",Shy but affectionate,London Branch,Medical Hold,No,Yes,Yes
+RSPCA-0028,King,Cat,Maine Coon,9 y/o,F,Large,Medium,"Hyperthyroidism, on medication",Enjoys playtime,Hampshire Branch,Medical Hold,Unknown,No,Unknown
+RSPCA-0029,Sophie,Cat,Devon Rex,14y 0m,Male,Medium,Low,"Healthy, neutered and vaccinated",Intelligent and trainable,Surrey Branch,Foster Care,Yes,Unknown,No
+RSPCA-0030,Sophie,Dog,Brussels Griffon,2.11 years,Male,Medium,Low,"Allergies, managed with medication",Not good with dogs,Hampshire Branch,Available,Yes,No,Unknown
+RSPCA-0031,Pixie,Dog,Rottweiler,8 years 0 months,M,Medium,Low,"Seizure disorder, controlled with medication",Social with other animals,London Branch,Pending,Yes,Yes,Unknown
+RSPCA-0032,Archie,Dog,Saint Bernard,1 y/o,M,Large,Very High,"Metabolic disorder, special diet",Gentle with smaller animals,London Branch,Foster Care,Yes,No,No
+RSPCA-0033,Sam,Dog,Pomeranian,5 years 2 months,M,Medium,Very Low,"Allergies, managed with medication",Cautious with strangers,London Branch,Quarantine,Yes,Yes,Yes
+RSPCA-0034,Shadow,Bird,Double Yellow-headed Amazon,0 years 5 months,Male,Small,High,"Healthy, vaccinated",Good with children,Surrey Branch,Adopted,Yes,Unknown,Yes
+RSPCA-0035,Leia,Reptile,Poison Dart Frog,7 years 0 months,M,Medium,Low,"Healthy, vaccinated",Enjoys fetch games,London Branch,Pending,Yes,Unknown,Yes
+RSPCA-0036,Leia,Bird,African Grey Parrot,2 years 5 months,M,Tiny,Very High,"Good health, needs vaccines",Separation anxiety,Kent Branch,Medical Hold,Yes,Yes,Unknown
+RSPCA-0037,Diamond,Reptile,Russian Tortoise,2 y/o,F,Medium,Very Low,"Minor health issues, vaccinated",Needs yard space,Kent Branch,Adopted,Yes,Unknown,No
+RSPCA-0038,Summer,Dog,Brussels Griffon,6y 0m,Male,Large,Low,Overweight but otherwise healthy,Quiet and reserved,Kent Branch,Pending,Unknown,No,No
+RSPCA-0039,Jackson,Reptile,Red-eared Slider,0 y/o,F,Small,Low,"Healthy, neutered and vaccinated",Toy motivated,Hampshire Branch,Foster Care,Yes,Unknown,No
+RSPCA-0040,Ozzy,Bird,White-fronted Amazon,2 y/o,F,Small,High,"Special needs, but good quality of life",Watches TV with you,Kent Branch,Foster Care,Unknown,No,Unknown
+RSPCA-0041,Shadow,Reptile,Horned Lizard,1 years 1 months,F,Small,Very Low,"Fully vaccinated, excellent health",Enjoys being brushed,London Branch,Foster Care,Yes,Unknown,Yes
+RSPCA-0042,Teddy,Reptile,Rosy Boa,2.8 years,M,Tiny,Low,"Heart murmur, monitor only",Enjoys being held,London Branch,Pending,Yes,Unknown,No
+RSPCA-0043,Belle,Cat,Cyprus,0y 4m,F,Large,Low,"Good health, needs vaccines",Quiet and reserved,Kent Branch,Adopted,Yes,Unknown,Yes
+RSPCA-0044,Teddy,Small Animal,Rhinelander Rabbit,0y 9m,F,Small,Medium,Deaf but adapts well,Water-loving,Hampshire Branch,Pending,Unknown,No,Unknown
+RSPCA-0045,Belle,Dog,Dalmatian,5y 3m,F,Large,Low,"Healthy, neutered and vaccinated",Loves car rides,Hampshire Branch,Medical Hold,Unknown,Unknown,Yes
+RSPCA-0046,Leia,Dog,Golden Retriever,2.7 years,F,Small,High,Overweight but otherwise healthy,House trained,Kent Branch,Foster Care,Unknown,Unknown,Unknown
+RSPCA-0047,Peanut,Reptile,Basilisk,3 years 10 months,F,Small,Very Low,"Metabolic disorder, special diet",Cautious with strangers,Kent Branch,Available,Unknown,No,Yes
+RSPCA-0048,Peanut,Small Animal,Havana Rabbit,2 y/o,Female,Tiny,Very Low,"Dental issues, needs soft food",Enjoys being held,Hampshire Branch,Pending,Unknown,Yes,Yes
+RSPCA-0049,Buster,Dog,Gordon Setter,2y 8m,Male,Large,Very High,"Recovering from surgery, otherwise healthy",Mellow companion,Kent Branch,Medical Hold,Unknown,No,Yes
+RSPCA-0050,Sophie,Cat,Lambkin,4 years 1 months,Male,Medium,Low,"Metabolic disorder, special diet",Confident and bold,London Branch,Pending,Yes,No,Unknown
+RSPCA-0051,Baxter,Cat,Peterbald,2 years 9 months,Female,Small,Low,"Metabolic disorder, special diet",Chill and relaxed,Kent Branch,Foster Care,Yes,Yes,Yes
+RSPCA-0052,Bandit,Small Animal,White Chinchilla,3.6 years,M,Small,Very High,Healthy with seasonal allergies,Loves car rides,Hampshire Branch,Available,Unknown,No,Unknown
+RSPCA-0053,Rex,Dog,Komondor,5y 5m,Female,Small,Low,"Fully vaccinated, excellent health",Separation anxiety,Kent Branch,Available,Unknown,Yes,Yes
+RSPCA-0054,Roxy,Cat,Highlander,5 years 11 months,Male,Small,Low,"Hyperthyroidism, on medication",Enjoys being held,Kent Branch,Foster Care,Yes,Unknown,Unknown
+RSPCA-0055,Ruby,Dog,Rhodesian Ridgeback,2 years 10 months,F,Large,High,"Seizure disorder, controlled with medication",Loyal and devoted,Surrey Branch,Available,Unknown,No,Unknown
+RSPCA-0056,Abby,Reptile,Milk Snake,3y 1m,F,Small,Low,Blind but adapts well,Adventure buddy,Hampshire Branch,Available,Yes,Unknown,Unknown
+RSPCA-0057,Raven,Small Animal,Violet Chinchilla,3.11 years,M,Small,High,"Dental issues, needs soft food",Snuggle expert,Hampshire Branch,Quarantine,No,Yes,Unknown
+RSPCA-0058,Leia,Small Animal,Bushy-tailed Jird,1y 3m,M,Small,Very Low,"Allergies, managed with medication",Separation anxiety,Kent Branch,Foster Care,Unknown,Unknown,Unknown
+RSPCA-0059,Bruno,Reptile,Veiled Chameleon,4 y/o,M,Medium,Very Low,"FeLV+ (cats), otherwise healthy",Friendly and outgoing,London Branch,Quarantine,No,No,Yes
+RSPCA-0060,King,Small Animal,Chinese Hamster,9 years 0 months,F,Tiny,Medium,"Healthy, vaccinated",Enjoys being brushed,Surrey Branch,Pending,Unknown,Unknown,Yes
+RSPCA-0061,Abby,Bird,Scarlet Macaw,3y 6m,F,Medium,Medium,"FIV+ (cats), otherwise healthy",Selective with friends,Hampshire Branch,Available,Unknown,Unknown,Yes
+RSPCA-0062,Toby,Reptile,Blue Tegu,0y 10m,M,Small,Low,"Special needs, but good quality of life",Inquisitive explorer,London Branch,Medical Hold,Yes,Yes,Yes
+RSPCA-0063,Diesel,Cat,Peterbald,3.7 years,F,Medium,Low,"Minor health issues, vaccinated",Confident and bold,London Branch,Adopted,Unknown,No,No
+RSPCA-0064,Frank,Cat,Bombay,1 y/o,M,Small,Medium,"Recovering from injury, making progress",Fearful of loud noises,Hampshire Branch,Pending,Unknown,Unknown,Unknown
+RSPCA-0065,Millie,Small Animal,Albino Ferret,5.5 years,Male,Tiny,High,"Recovering from surgery, otherwise healthy",Chill and relaxed,London Branch,Available,No,Unknown,Yes
+RSPCA-0066,Bruce,Small Animal,Mini Lop,13.0 years,M,Small,Medium,"Good health, not neutered",Selective with friends,Hampshire Branch,Available,No,Yes,Unknown
+RSPCA-0067,Precious,Reptile,Mud Turtle,3 years 5 months,M,Medium,Very Low,"Hyperthyroidism, on medication",Friendly and outgoing,Kent Branch,Available,Yes,No,Yes
+RSPCA-0068,Frank,Dog,Great Pyrenees,3 years 3 months,F,Giant,Low,"Underweight, needs special diet",Water-loving,Hampshire Branch,Adopted,Unknown,No,No
+RSPCA-0069,Belle,Bird,Red-bellied Parrot,0 years 7 months,F,Tiny,Medium,"Minor health issues, vaccinated",Gentle with smaller animals,London Branch,Quarantine,Unknown,Unknown,Yes
+RSPCA-0070,Buddy,Dog,Greyhound,1.7 years,Male,Large,Medium,Deaf but adapts well,Energetic player,Surrey Branch,Adopted,Yes,Unknown,Unknown
+RSPCA-0071,Blossom,Cat,York Chocolate,4.4 years,Female,Small,Low,Deaf but adapts well,Enjoys being held,Kent Branch,Available,No,Unknown,No
+RSPCA-0072,Chloe,Reptile,Box Turtle,4.5 years,Male,Small,Very Low,"Dental issues, needs soft food",Enjoys being brushed,Surrey Branch,Available,No,Unknown,No
+RSPCA-0073,Thor,Reptile,Garter Snake,2.0 years,Male,Small,Very Low,"Healthy, recently spayed",Needs yard space,Hampshire Branch,Quarantine,Yes,No,Unknown
+RSPCA-0074,Titan,Bird,Brown-headed Parrot,0 years 1 months,Male,Tiny,Medium,"Good health, needs vaccines",Shy but affectionate,London Branch,Foster Care,Yes,Yes,No
+RSPCA-0075,Sasha,Bird,Scarlet Macaw,2 years 8 months,Female,Large,Medium,"Recovering from surgery, otherwise healthy",Enjoys fetch games,Surrey Branch,Available,Yes,Unknown,Yes
+RSPCA-0076,Coco,Cat,Sterling,3.1 years,M,Small,Medium,Deaf but adapts well,Sunbathing enthusiast,Hampshire Branch,Adopted,Yes,No,No
+RSPCA-0077,Sadie,Bird,Fischer's Lovebird,1 years 2 months,M,Tiny,High,"Heart murmur, monitor only",Territorial,Kent Branch,Quarantine,Yes,Unknown,Yes
+RSPCA-0078,Dexter,Bird,Ducorps' Cockatoo,5 y/o,M,Medium,High,"Healthy, recently spayed",Perfect apartment pet,Kent Branch,Quarantine,No,Unknown,Yes
+RSPCA-0079,Charlie,Dog,Greater Swiss Mountain Dog,3 y/o,F,X-Large,Low,"Allergies, managed with medication",Adventure buddy,Kent Branch,Medical Hold,No,Yes,No
+RSPCA-0080,Toby,Cat,Sokoke,2 y/o,M,Large,Low,"Diabetes, managed with insulin",Cuddle buddy,Kent Branch,Adopted,No,Unknown,No
+RSPCA-0081,Rex,Small Animal,Tan Rabbit,13.0 years,Male,Tiny,Very High,"Healthy, recently spayed",Confident and bold,Hampshire Branch,Medical Hold,Unknown,Unknown,Yes
+RSPCA-0082,Sugar,Bird,Half Moon Conure,5.9 years,Female,Small,High,"Healthy, vaccinated",Snuggle expert,Hampshire Branch,Pending,Unknown,No,Unknown
+RSPCA-0083,Shadow,Small Animal,Teddy Guinea Pig,14y 0m,F,Small,Very Low,Senior with arthritis,"High energy, needs exercise",Hampshire Branch,Adopted,Yes,Yes,Yes
+RSPCA-0084,Jasper,Reptile,Fire-bellied Toad,2y 4m,Male,Medium,Very Low,"Allergies, managed with medication","High energy, needs exercise",London Branch,Medical Hold,Unknown,Unknown,Yes
+RSPCA-0085,Rufus,Reptile,Tomato Frog,0 y/o,M,Medium,Very Low,"Diabetes, managed with insulin",Cautious with strangers,Surrey Branch,Medical Hold,No,Unknown,No
+RSPCA-0086,Ranger,Small Animal,Chocolate Ferret,0y 11m,Male,Small,Low,"Recovering from injury, making progress",Independent nature,Hampshire Branch,Foster Care,No,No,Yes
+RSPCA-0087,Lily,Small Animal,Cinnamon Ferret,11y 0m,Male,Small,Medium,Deaf but adapts well,Good for first-time owners,Hampshire Branch,Quarantine,No,Yes,Yes
+RSPCA-0088,Ozzy,Bird,Mixed Breed,5 years 11 months,Female,Tiny,Very High,"Heart murmur, monitor only",Intelligent and trainable,Hampshire Branch,Foster Care,No,No,Unknown
+RSPCA-0089,Gus,Small Animal,Syrian Hamster,1.3 years,M,Small,Medium,"FeLV+ (cats), otherwise healthy",Playful and curious,Hampshire Branch,Pending,Yes,Unknown,Yes
+RSPCA-0090,Oreo,Bird,Roller Canary,5.9 years,Male,Small,Medium,"Underweight, needs special diet",Well-trained and obedient,London Branch,Pending,Unknown,Unknown,Yes
+RSPCA-0091,Cash,Dog,Akita,0 y/o,Male,Large,High,"Recovering from injury, making progress",Follows you everywhere,Surrey Branch,Medical Hold,Unknown,Unknown,Yes
+RSPCA-0092,Stella,Reptile,Day Gecko,10.0 years,M,Tiny,Very Low,Partial hearing loss,Chill and relaxed,Kent Branch,Adopted,Yes,Unknown,Yes
+RSPCA-0093,Daisy,Cat,Norwegian Forest Cat,5 y/o,Male,Medium,Low,"Diabetes, managed with insulin",Friendly and outgoing,Hampshire Branch,Quarantine,Unknown,Yes,Unknown
+RSPCA-0094,Titan,Cat,Cheetoh,6y 0m,M,Medium,Low,"Recovering from surgery, otherwise healthy",Fearful of loud noises,Hampshire Branch,Quarantine,Unknown,Unknown,Yes
+RSPCA-0095,Diesel,Reptile,Gargoyle Gecko,1 y/o,Male,Medium,Very Low,"Good health, not neutered",Cautious with strangers,Kent Branch,Quarantine,Unknown,No,Unknown
+RSPCA-0096,Atlas,Dog,Bernese Mountain Dog,10.0 years,Female,Small,Medium,"Healthy, recently spayed",Lap pet,Hampshire Branch,Adopted,Yes,Yes,Yes
+RSPCA-0097,Belle,Reptile,African Fat-tailed Gecko,6y 0m,Female,Small,Low,"Diabetes, managed with insulin",Fearful of loud noises,Surrey Branch,Available,No,Unknown,No
+RSPCA-0098,Rusty,Small Animal,American Rabbit,5 y/o,Male,Tiny,Medium,Partial hearing loss,Enjoys walks,London Branch,Quarantine,No,No,Unknown
+RSPCA-0099,Nova,Reptile,Colombian Tegu,2.3 years,Male,Tiny,Low,"Hyperthyroidism, on medication",Vocal and expressive,Kent Branch,Medical Hold,No,Yes,Unknown
+RSPCA-0100,Abby,Cat,Himalayan,5.9 years,Female,Large,Low,"Hypothyroidism, on medication",Anxious in new situations,London Branch,Pending,No,No,Unknown

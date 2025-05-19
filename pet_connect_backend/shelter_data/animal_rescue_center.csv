@@ -1,0 +1,101 @@
+ID,Pet Name,Type,Animal Breed,Age (months),Sex,Size,Energy Level,Medical Status,Behavior Notes,Shelter Location,Status,Good With Children,Good With Other Animals,Special Needs
+ARC-0001,Sophie,Dog,Chihuahua,44,M,Tiny,Very Low,Deaf but adapts well,Needs yard space,"Animal Rescue Center, Leeds",Not Available,Unknown,Yes,No
+ARC-0002,Lily,Dog,Weimaraner,22,F,Medium,Low,"Special needs, but good quality of life",Experienced owner preferred; not compatible with other dogs,"Animal Rescue Center, Leeds",Available,Yes,No,No
+ARC-0003,Finn,Cat,Bombay,5,F,Small,Medium,"Allergies, managed with medication",Not good with dogs,"Animal Rescue Center, Birmingham",Not Available,No,Yes,No
+ARC-0004,Maverick,Dog,Welsh Corgi,97,M,Small,High,"Fully vaccinated, excellent health",Independent nature,"Animal Rescue Center, Birmingham",On Hold,Yes,Unknown,No
+ARC-0005,Olive,Cat,American Wirehair,15,Unknown,Small,Low,Partial hearing loss,Gets along with other pets,"Animal Rescue Center, Leeds",On Hold,Unknown,Unknown,No
+ARC-0006,Louie,Cat,Highlander,6,M,Small,Medium,"Good health, not neutered",Food motivated; not compatible with other dogs,"Animal Rescue Center, Birmingham",Not Available,Unknown,Unknown,Yes
+ARC-0007,Phoebe,Small Animal,Silkie Guinea Pig,22,F,Small,Very High,"Dental issues, needs soft food",Enjoys walks,"Animal Rescue Center, Manchester",Not Available,Yes,No,Yes
+ARC-0008,Jack,Small Animal,Florida White,48,Unknown,Small,Low,"Vision impaired, adapts well",Well-trained and obedient; not good with kids,"Animal Rescue Center, Birmingham",On Hold,Unknown,Yes,No
+ARC-0009,Sammy,Small Animal,Long-tailed Chinchilla,35,Unknown,Small,Medium,"Fully vaccinated, excellent health",Good for first-time owners,"Animal Rescue Center, London",Available,No,Unknown,Yes
+ARC-0010,Atlas,Cat,Serengeti,37,F,Large,Medium,"Allergies, managed with medication",Not good with dogs; not good with kids,"Animal Rescue Center, Leeds",On Hold,Yes,Yes,No
+ARC-0011,Jax,Dog,Boxer,37,F,Large,Very High,"Diabetes, managed with insulin",Quiet and reserved,"Animal Rescue Center, Leeds",On Hold,Unknown,Unknown,No
+ARC-0012,Blossom,Reptile,Gila Monster,34,F,Small,Low,Overweight but otherwise healthy,Vocal and expressive,"Animal Rescue Center, Manchester",Not Available,Yes,Yes,Yes
+ARC-0013,Precious,Reptile,Fire Salamander,4,Unknown,Small,Very Low,"Underweight, needs special diet",Not good with cats,"Animal Rescue Center, Manchester",Available,No,Yes,No
+ARC-0014,Titan,Dog,Xoloitzcuintli,43,F,Large,Very High,Healthy with seasonal allergies,Independent nature,"Animal Rescue Center, Manchester",Not Available,Yes,Yes,Yes
+ARC-0015,Thor,Dog,Gordon Setter,25,M,Large,Very Low,Partial hearing loss,Selective with friends; not compatible with other dogs,"Animal Rescue Center, Leeds",Not Available,No,Yes,Yes
+ARC-0016,Bella,Dog,Shetland Sheepdog,30,M,Medium,Very Low,Senior with arthritis,Confident and bold; not good with kids,"Animal Rescue Center, Manchester",Adopted,Unknown,No,Yes
+ARC-0017,Lola,Reptile,Whites Tree Frog,21,M,Small,Very Low,"Fully vaccinated, excellent health",Follows you everywhere,"Animal Rescue Center, London",Adopted,Unknown,Yes,Yes
+ARC-0018,Simba,Cat,Javanese,59,M,Small,Medium,Healthy with seasonal allergies,Social with other animals,"Animal Rescue Center, Leeds",Adopted,Yes,Unknown,Yes
+ARC-0019,Pepper,Reptile,Blood Python,41,Unknown,Large,Low,"Good health, needs vaccines",Intelligent and trainable; doesn't get along with cats,"Animal Rescue Center, Birmingham",Available,Yes,Yes,No
+ARC-0020,Sunny,Reptile,Chinese Water Dragon,6,Unknown,Medium,Very Low,"Healthy, recently spayed",Selective with friends; not compatible with other dogs,"Animal Rescue Center, London",Not Available,Yes,Yes,No
+ARC-0021,Archie,Reptile,Gargoyle Gecko,122,F,Tiny,Very Low,"Hypothyroidism, on medication",Selective with friends; doesn't get along with cats,"Animal Rescue Center, Leeds",On Hold,Unknown,Unknown,No
+ARC-0022,Ruby,Small Animal,Chocolate Ferret,59,M,Small,Low,Blind but adapts well,Toy motivated; not good with kids; not compatible with other dogs,"Animal Rescue Center, Leeds",Adopted,No,Unknown,Yes
+ARC-0023,Emma,Bird,Diamond Firetail Finch,50,F,Small,Very High,"Hypothyroidism, on medication",Follows you everywhere,"Animal Rescue Center, Manchester",Adopted,No,No,Yes
+ARC-0024,Lucky,Cat,Raas,1,F,Small,Medium,"Allergies, managed with medication",Gentle with smaller animals,"Animal Rescue Center, Birmingham",Adopted,No,No,No
+ARC-0025,Poppy,Reptile,Pink-tongued Skink,14,Unknown,Small,Low,"Recovering from injury, making progress",Toy motivated; doesn't get along with cats; not compatible with other dogs,"Animal Rescue Center, London",On Hold,Yes,No,No
+ARC-0026,Princess,Small Animal,Algerian Gerbil,155,F,Small,Medium,"Chronic condition, managed with medication",Inquisitive explorer; not good with kids; not compatible with other dogs,"Animal Rescue Center, Manchester",On Hold,Unknown,Yes,Yes
+ARC-0027,Baxter,Cat,Khao Manee,2,Unknown,Large,Low,"Metabolic disorder, special diet","Timid, needs patience","Animal Rescue Center, Leeds",Adopted,Yes,No,No
+ARC-0028,Dexter,Cat,Tiffanie,54,Unknown,Medium,Low,"FeLV+ (cats), otherwise healthy",Perfect apartment pet; not good with kids; doesn't get along with cats,"Animal Rescue Center, Birmingham",Adopted,Yes,No,No
+ARC-0029,Holly,Small Animal,European Hamster,27,Unknown,Tiny,High,"Seizure disorder, controlled with medication",Watches TV with you; not compatible with other dogs,"Animal Rescue Center, London",Adopted,Yes,No,No
+ARC-0030,Izzy,Cat,Selkirk Rex,6,Unknown,Small,Low,"Good health, needs vaccines",Cautious with strangers,"Animal Rescue Center, Leeds",Available,No,Yes,No
+ARC-0031,Mia,Small Animal,European Hamster,12,M,Tiny,High,"Allergies, managed with medication",Water-loving; not good with kids; doesn't get along with cats,"Animal Rescue Center, London",Available,No,No,No
+ARC-0032,Jake,Bird,Parakeet,55,F,Tiny,High,"Heartworm positive, undergoing treatment",Well-trained and obedient,"Animal Rescue Center, Leeds",Adopted,Yes,Unknown,Yes
+ARC-0033,Millie,Small Animal,Long-tailed Chinchilla,84,F,Tiny,Medium,"Recovering from surgery, otherwise healthy","High energy, needs exercise; not good with kids","Animal Rescue Center, Manchester",Available,No,No,No
+ARC-0034,Blossom,Bird,Sulfur-crested Cockatoo,60,M,Medium,High,"Recovering from injury, making progress",Sunbathing enthusiast; not compatible with other dogs,"Animal Rescue Center, Birmingham",Available,Yes,Yes,Yes
+ARC-0035,Poppy,Bird,Budgerigar,40,M,Tiny,Very High,"Good health, needs vaccines",Food motivated; not good with kids,"Animal Rescue Center, London",Adopted,Yes,No,No
+ARC-0036,Frank,Cat,Havana Brown,39,F,Medium,Medium,"Metabolic disorder, special diet",Territorial; not good with kids,"Animal Rescue Center, Leeds",On Hold,No,Yes,Yes
+ARC-0037,Layla,Bird,Ducorps' Cockatoo,42,F,Medium,Medium,"Allergies, managed with medication",Shy but affectionate,"Animal Rescue Center, London",On Hold,Yes,Yes,Yes
+ARC-0038,Baby,Small Animal,Mongolian Gerbil,50,Unknown,Tiny,Medium,"Underweight, needs special diet",Snuggle expert,"Animal Rescue Center, Leeds",Not Available,Unknown,Unknown,Yes
+ARC-0039,Angel,Reptile,Gopher Snake,56,Unknown,Tiny,Very Low,"Vision impaired, adapts well",Loyal and devoted; not good with kids,"Animal Rescue Center, London",Adopted,Unknown,Unknown,Yes
+ARC-0040,Mocha,Dog,English Foxhound,57,Unknown,Large,High,"FIV+ (cats), otherwise healthy",Lap pet,"Animal Rescue Center, Manchester",Not Available,No,Yes,No
+ARC-0041,Copper,Bird,African Grey Parrot,30,Unknown,Tiny,Very High,"Good health, not neutered",Not good with dogs; not good with kids,"Animal Rescue Center, Manchester",Not Available,Yes,Yes,No
+ARC-0042,Sam,Dog,Smooth Fox Terrier,50,M,Tiny,Medium,"Special needs, but good quality of life",Protective instincts,"Animal Rescue Center, Birmingham",Not Available,Unknown,Yes,Yes
+ARC-0043,Koda,Small Animal,Dwarf Hamster,39,M,Small,Medium,Deaf but adapts well,Toy motivated; not good with kids,"Animal Rescue Center, Birmingham",Available,No,Unknown,No
+ARC-0044,Rex,Dog,Greyhound,45,M,Medium,Low,Overweight but otherwise healthy,Loves meeting new people,"Animal Rescue Center, Birmingham",Adopted,No,Unknown,Yes
+ARC-0045,Duke,Reptile,Sailfin Dragon,30,F,Medium,Low,Overweight but otherwise healthy,Calm and laid-back,"Animal Rescue Center, Birmingham",Adopted,Yes,Unknown,No
+ARC-0046,Baxter,Small Animal,European Hedgehog,155,F,Tiny,Medium,"Good health, needs vaccines",Selective with friends; not good with kids,"Animal Rescue Center, Birmingham",On Hold,No,Unknown,Yes
+ARC-0047,Misty,Reptile,Rat Snake,135,Unknown,Small,Very Low,"Fully vaccinated, excellent health",Enjoys walks,"Animal Rescue Center, Birmingham",Available,Yes,Yes,No
+ARC-0048,Rosie,Reptile,Gila Monster,42,Unknown,Small,Very Low,"Chronic condition, managed with medication",Inquisitive explorer; not compatible with other dogs,"Animal Rescue Center, Birmingham",On Hold,Unknown,Yes,Yes
+ARC-0049,Fiona,Small Animal,Spiny Mouse,52,M,Tiny,Very High,"Special needs, but good quality of life",Enjoys playtime; doesn't get along with cats,"Animal Rescue Center, London",Available,No,Yes,No
+ARC-0050,Bella,Small Animal,American Guinea Pig,146,F,Small,Very High,"Healthy, neutered and vaccinated",Confident and bold; not good with kids,"Animal Rescue Center, London",Available,No,Unknown,Yes
+ARC-0051,Jax,Cat,Thai,22,M,Small,Low,"FIV+ (cats), otherwise healthy",Good with children; doesn't get along with cats,"Animal Rescue Center, London",Available,No,No,Yes
+ARC-0052,Ranger,Cat,Ukrainian Levkoy,16,M,Medium,Medium,"Healthy, recently spayed",Perfect apartment pet,"Animal Rescue Center, Leeds",Not Available,Unknown,Yes,Yes
+ARC-0053,Trixie,Cat,Ragdoll Tabby,174,F,Small,Medium,Healthy with seasonal allergies,Very affectionate; doesn't get along with cats,"Animal Rescue Center, London",Not Available,No,Yes,No
+ARC-0054,Kiki,Dog,Cocker Spaniel,30,F,Medium,High,"Diabetes, managed with insulin",Needs yard space,"Animal Rescue Center, Manchester",Available,Yes,No,Yes
+ARC-0055,Henry,Reptile,Uromastyx,119,M,Small,Very Low,"Good health, needs vaccines",Cautious with strangers; not good with kids; doesn't get along with cats,"Animal Rescue Center, Leeds",Available,No,Yes,Yes
+ARC-0056,Koda,Small Animal,Manx Rat,26,M,Small,Low,"Recovering from surgery, otherwise healthy",Cuddle buddy; not good with kids,"Animal Rescue Center, Manchester",On Hold,Yes,Yes,Yes
+ARC-0057,Summer,Reptile,Pacman Frog,44,F,Tiny,Very Low,"FIV+ (cats), otherwise healthy",Anxious in new situations; doesn't get along with cats,"Animal Rescue Center, Manchester",On Hold,Yes,Unknown,No
+ARC-0058,Buster,Reptile,Leopard Gecko,41,Unknown,Medium,Low,"Healthy, vaccinated",Quiet and reserved,"Animal Rescue Center, London",On Hold,No,Yes,No
+ARC-0059,Rusty,Dog,Leonberger,43,M,Small,High,Partial hearing loss,Cuddle buddy; not good with kids,"Animal Rescue Center, Manchester",Available,No,Unknown,Yes
+ARC-0060,Raven,Small Animal,Tan Rabbit,90,M,Small,Medium,"Diabetes, managed with insulin",Quiet and reserved; not good with kids,"Animal Rescue Center, London",Not Available,No,No,No
+ARC-0061,Phoebe,Dog,Welsh Springer Spaniel,47,F,Large,Very High,"Special needs, but good quality of life",Calm and laid-back; not compatible with other dogs,"Animal Rescue Center, Leeds",Adopted,No,No,Yes
+ARC-0062,Simba,Bird,Cherry-headed Conure,59,Unknown,Tiny,High,"Good health, needs vaccines",Sunbathing enthusiast; not good with kids; doesn't get along with cats,"Animal Rescue Center, Leeds",On Hold,Unknown,Yes,Yes
+ARC-0063,Winston,Small Animal,Mini Lop,74,Unknown,Small,High,"Heartworm positive, undergoing treatment",Experienced owner preferred,"Animal Rescue Center, Birmingham",On Hold,Unknown,Unknown,Yes
+ARC-0064,Blue,Cat,Cornish Rex,105,M,Medium,Low,"Good health, not neutered",Needs yard space,"Animal Rescue Center, London",Adopted,Unknown,Yes,Yes
+ARC-0065,Louie,Cat,Aegean,46,F,Medium,Medium,"Special needs, but good quality of life",Sunbathing enthusiast,"Animal Rescue Center, Birmingham",Not Available,Yes,Unknown,No
+ARC-0066,Frank,Dog,Australian Shepherd,4,Unknown,Medium,High,"Metabolic disorder, special diet",Gentle with smaller animals; not good with kids; doesn't get along with cats,"Animal Rescue Center, London",Adopted,Unknown,Unknown,Yes
+ARC-0067,Pearl,Dog,Saluki,35,Unknown,Small,Very Low,"Vision impaired, adapts well",Lap pet,"Animal Rescue Center, Leeds",On Hold,Unknown,Unknown,Yes
+ARC-0068,Marley,Small Animal,Havana Rabbit,87,F,Small,Medium,Deaf but adapts well,Enjoys playtime; not good with kids; doesn't get along with cats,"Animal Rescue Center, Manchester",Available,Unknown,Unknown,Yes
+ARC-0069,Chloe,Dog,Blue Heeler,30,F,Small,Low,"Good health, not neutered",Shy but affectionate; doesn't get along with cats,"Animal Rescue Center, Birmingham",Adopted,Unknown,Yes,No
+ARC-0070,Scout,Cat,Oriental,31,M,Small,Low,"Vision impaired, adapts well",Cuddle buddy; not compatible with other dogs,"Animal Rescue Center, Leeds",On Hold,Yes,Yes,No
+ARC-0071,Maverick,Dog,Doberman,19,F,Large,Low,"Dental issues, needs soft food",Fearful of loud noises; not good with kids,"Animal Rescue Center, Birmingham",Not Available,No,Unknown,No
+ARC-0072,Penny,Reptile,Ackie Monitor,60,M,X-Large,Low,"Hyperthyroidism, on medication",Mellow companion; not good with kids,"Animal Rescue Center, Birmingham",Adopted,Unknown,Unknown,Yes
+ARC-0073,Mocha,Bird,Lilac-crowned Amazon,132,Unknown,Small,Medium,"Needs dental work, otherwise healthy",Intelligent and trainable,"Animal Rescue Center, Leeds",On Hold,No,Yes,Yes
+ARC-0074,Ginger,Small Animal,Chinchilla,14,F,Small,High,Healthy with seasonal allergies,"High energy, needs exercise; not compatible with other dogs","Animal Rescue Center, Manchester",Not Available,Unknown,Unknown,No
+ARC-0075,Riley,Cat,Havana Brown,163,Unknown,Large,Low,"FIV+ (cats), otherwise healthy",Confident and bold,"Animal Rescue Center, Manchester",Adopted,Yes,Yes,Yes
+ARC-0076,Nala,Bird,Orange-winged Amazon,91,M,Small,Very High,"FeLV+ (cats), otherwise healthy",Not good with cats,"Animal Rescue Center, Leeds",Adopted,Unknown,Unknown,Yes
+ARC-0077,Nova,Dog,Labrador Retriever,22,F,Medium,High,"Fully vaccinated, excellent health",Loyal and devoted,"Animal Rescue Center, London",On Hold,Unknown,Yes,No
+ARC-0078,Nala,Cat,Burmese,49,Unknown,Large,Medium,"Recovering from surgery, otherwise healthy",Friendly and outgoing,"Animal Rescue Center, Leeds",Available,No,No,Yes
+ARC-0079,Otis,Small Animal,California Rabbit,17,F,Tiny,High,"Metabolic disorder, special diet",House trained,"Animal Rescue Center, Birmingham",Available,Unknown,No,No
+ARC-0080,Penny,Bird,Sulfur-crested Cockatoo,15,F,Medium,High,Blind but adapts well,Gets along with other pets,"Animal Rescue Center, London",Not Available,No,Unknown,No
+ARC-0081,Hunter,Reptile,Savannah Monitor,159,F,X-Large,Very Low,"Healthy, recently spayed",Fearful of loud noises,"Animal Rescue Center, Leeds",Available,Yes,Yes,Yes
+ARC-0082,Max,Reptile,Rosy Boa,7,Unknown,Medium,Very Low,Partial hearing loss,Needs basic training,"Animal Rescue Center, London",On Hold,Unknown,Yes,Yes
+ARC-0083,King,Small Animal,Winter White Dwarf Hamster,37,M,Small,High,Senior with arthritis,Food motivated; not compatible with other dogs,"Animal Rescue Center, Leeds",Adopted,Yes,Yes,No
+ARC-0084,Roxy,Cat,European Burmese,57,M,Large,Low,"Chronic condition, managed with medication",Confident and bold,"Animal Rescue Center, Birmingham",Not Available,Unknown,Unknown,No
+ARC-0085,Skye,Reptile,Nile Monitor,22,M,X-Large,Low,"Heart murmur, monitor only",Not good with dogs; not compatible with other dogs,"Animal Rescue Center, London",Adopted,No,Yes,Yes
+ARC-0086,Prince,Bird,Major Mitchell's Cockatoo,7,Unknown,Large,Very High,"Vision impaired, adapts well",Follows you everywhere; doesn't get along with cats,"Animal Rescue Center, Manchester",Available,Unknown,Yes,No
+ARC-0087,Baby,Bird,Red-shouldered Macaw,55,Unknown,Medium,High,"Metabolic disorder, special diet","High energy, needs exercise","Animal Rescue Center, Manchester",Not Available,Unknown,Unknown,No
+ARC-0088,Buster,Reptile,Rat Snake,144,Unknown,Medium,Low,"Minor health issues, vaccinated",Very affectionate,"Animal Rescue Center, London",On Hold,Unknown,Yes,Yes
+ARC-0089,Phoebe,Reptile,Marbled Salamander,30,M,Medium,Very Low,"Good health, not neutered",Cautious with strangers,"Animal Rescue Center, Leeds",Adopted,No,Unknown,Yes
+ARC-0090,Bruce,Reptile,Cuban Tree Frog,90,F,Small,Low,"Vision impaired, adapts well",Enjoys fetch games,"Animal Rescue Center, Birmingham",On Hold,No,No,Yes
+ARC-0091,Apollo,Dog,Saluki,159,Unknown,Small,Very High,"Minor health issues, vaccinated",Not good with dogs; not compatible with other dogs,"Animal Rescue Center, London",On Hold,Yes,No,No
+ARC-0092,Charlie,Small Animal,Baldwin Guinea Pig,8,M,Tiny,Medium,"Heart murmur, monitor only",Gentle with smaller animals,"Animal Rescue Center, Leeds",Not Available,No,No,Yes
+ARC-0093,Holly,Cat,Somali,137,F,Large,Low,"Hypothyroidism, on medication",Follows you everywhere,"Animal Rescue Center, Birmingham",Available,No,Yes,Yes
+ARC-0094,Lola,Reptile,Leopard Frog,118,F,Tiny,Very Low,"Dental issues, needs soft food",Follows you everywhere; not good with kids,"Animal Rescue Center, Leeds",Not Available,Unknown,Unknown,No
+ARC-0095,Koda,Cat,Himalayan,34,M,Small,Medium,"Healthy, recently spayed",Loves car rides; doesn't get along with cats,"Animal Rescue Center, Manchester",Available,Yes,Yes,No
+ARC-0096,Athena,Cat,Siberian,61,M,Large,Low,Partial hearing loss,Follows you everywhere,"Animal Rescue Center, Birmingham",Not Available,No,No,No
+ARC-0097,Pixie,Reptile,Poison Dart Frog,4,M,Tiny,Very Low,"Minor health issues, vaccinated",House trained,"Animal Rescue Center, Birmingham",Available,Yes,Unknown,Yes
+ARC-0098,Bella,Small Animal,Tan Rabbit,42,F,Tiny,Medium,"Hypothyroidism, on medication",Gentle with smaller animals,"Animal Rescue Center, London",On Hold,No,Yes,Yes
+ARC-0099,Atlas,Bird,Spice Finch,7,F,Tiny,High,Blind but adapts well,Intelligent and trainable,"Animal Rescue Center, London",Not Available,No,Yes,Yes
+ARC-0100,Buster,Small Animal,Mixed Breed,47,Unknown,Tiny,Very Low,"Seizure disorder, controlled with medication",Mellow companion,"Animal Rescue Center, Leeds",Available,Yes,No,No

@@ -1,0 +1,101 @@
+Ref Number,Animal Name,Animal Type,Breed,Years Old,Months Old,M/F,Size,Energy Level,Vaccinated,Neutered/Spayed,Kid Friendly,Cat Friendly,Dog Friendly,Status,Arrival Date,Special Needs,House Trained,Temperament
+HS-0001,Lily,Cat,Siamese,8,0,F,Large,Medium,Partial,Yes,1,True,No,Adopted,2025-02-15,Yes,In Progress,House trained
+HS-0002,Jack,Small Animal,Hairless Rat,9,0,M,Tiny,Very Low,Partial,Yes,No,1,No,Adopted,2025-04-08,Yes,Yes,"Watches TV with you, Gets along with other pets"
+HS-0003,Riley,Dog,Maltese,9,0,F,Small,Very High,Partial,Yes,1,True,0,Adopted,2025-05-04,No,In Progress,Sunbathing enthusiast
+HS-0004,Duke,Small Animal,American Fuzzy Lop,5,0,M,Tiny,Medium,Partial,Yes,Yes,0,1,Adopted,2025-01-11,No,No,"Intelligent and trainable, Good for first-time owners, Shy but affectionate"
+HS-0005,Trixie,Reptile,Map Turtle,1,0,M,Medium,Low,No,No,0,True,No,Unavailable,2025-02-12,No,Yes,Loyal and devoted
+HS-0006,Rex,Dog,Welsh Corgi,5,0,F,Medium,High,Yes,Yes,Yes,No,No,Adopted,2025-02-01,No,Yes,"Needs yard space, Adventure buddy"
+HS-0007,Ruby,Bird,Scarlet Macaw,2,0,F,Medium,Medium,Yes,No,No,1,Yes,Adopted,2025-01-17,Yes,Yes,"Lap pet, Mellow companion"
+HS-0008,Coco,Bird,Mixed Breed,5,0,F,Tiny,Very High,Yes,Yes,True,1,Yes,Adopted,2025-02-14,No,Yes,Fearful of loud noises
+HS-0009,Jasper,Dog,Norwegian Elkhound,3,0,F,Medium,High,Yes,Yes,1,0,1,Available,2024-11-26,Yes,No,Enjoys walks
+HS-0010,Cash,Small Animal,Manx Rat,10,0,F,Small,Very Low,Yes,Yes,Yes,True,False,Available,2025-02-10,Yes,In Progress,"Food motivated, Calm and laid-back, Loves attention"
+HS-0011,Precious,Reptile,Carpet Python,10,0,M,X-Large,Low,Yes,Yes,No,False,False,Adopted,2025-01-11,Yes,In Progress,"Selective with friends, Prefers adults only, Loves meeting new people"
+HS-0012,Daisy,Bird,Red-shouldered Macaw,1,0,F,Large,High,Partial,Yes,Yes,No,True,Pending,2025-02-02,No,No,"Good with children, Separation anxiety, Quiet and reserved"
+HS-0013,Chase,Reptile,Fire Skink,1,0,F,Small,Low,No,Yes,False,True,True,Available,2025-03-08,No,In Progress,"Gentle with smaller animals, Cautious with strangers, Selective with friends"
+HS-0014,Oliver,Small Animal,California Rabbit,3,0,M,Small,Very Low,Yes,No,False,No,No,Unavailable,2025-03-19,Yes,Yes,"Loyal and devoted, Needs yard space, Calm and laid-back"
+HS-0015,Peanut,Bird,Cockatiel Whiteface,5,0,M,Tiny,High,No,No,1,No,False,Unavailable,2025-03-20,No,No,"Intelligent and trainable, Enjoys being held"
+HS-0016,Luna,Cat,Mixed Breed,3,0,M,Small,Low,Yes,Yes,No,No,0,Unavailable,2025-04-30,No,Yes,"Intelligent and trainable, Enjoys being brushed, Independent nature"
+HS-0017,Rusty,Dog,Chow Chow,7,0,M,Small,Medium,No,No,True,False,Yes,Pending,2025-04-10,No,In Progress,Calm and laid-back
+HS-0018,Murphy,Dog,Soft Coated Wheaten Terrier,2,0,M,Small,Low,Partial,Yes,Yes,No,False,Available,2025-02-05,Yes,In Progress,"Crate trained, Chill and relaxed, Enjoys playtime"
+HS-0019,Bear,Dog,Corgi,8,0,M,Large,Low,Partial,No,True,1,Yes,Adopted,2025-01-09,No,In Progress,"Mellow companion, Not good with cats, Calm and laid-back"
+HS-0020,Koda,Small Animal,Rex Rat,6,0,F,Small,Medium,No,Yes,True,1,True,Unavailable,2025-05-09,No,Yes,"Loves car rides, Cautious with strangers"
+HS-0021,George,Small Animal,Fancy Mouse,9,0,F,Small,High,No,No,True,Yes,True,Available,2025-03-09,Yes,Yes,"Toy motivated, Vocal and expressive, Experienced owner preferred"
+HS-0022,Lady,Reptile,Green Iguana,0,11,M,Medium,Very Low,No,No,0,No,1,Available,2025-02-15,Yes,No,"Mellow companion, High energy, needs exercise, Not good with dogs"
+HS-0023,Precious,Reptile,Chinese Water Dragon,10,0,M,Tiny,Low,Yes,No,True,True,False,Adopted,2025-05-05,Yes,In Progress,Food motivated
+HS-0024,Lucy,Bird,Goffin's Cockatoo,6,0,M,Medium,Medium,Yes,No,1,Yes,Yes,Available,2025-01-04,No,In Progress,"Independent nature, Not good with dogs"
+HS-0025,Violet,Dog,Whippet,5,0,F,Large,Low,Partial,Yes,No,Yes,No,Pending,2025-01-09,Yes,No,Enjoys playtime
+HS-0026,Jake,Small Animal,Silver Ferret,9,0,M,Small,Very High,Yes,No,True,False,0,Unavailable,2025-02-23,Yes,Yes,Perfect apartment pet
+HS-0027,Ace,Reptile,Nile Monitor,1,0,M,Medium,Very Low,Partial,Yes,1,No,No,Adopted,2025-01-07,Yes,In Progress,Gentle with smaller animals
+HS-0028,Penny,Bird,Orange-winged Amazon,9,0,F,Tiny,High,No,Yes,1,False,Yes,Adopted,2025-03-07,Yes,No,"Loyal and devoted, High energy, needs exercise"
+HS-0029,Gus,Cat,European Burmese,3,0,M,Large,Medium,No,Yes,0,Yes,Yes,Pending,2024-11-21,No,Yes,"Selective with friends, Needs basic training"
+HS-0030,Chloe,Small Animal,Mini Lop,1,0,M,Small,Medium,Partial,Yes,1,False,Yes,Unavailable,2025-04-22,Yes,In Progress,Enjoys fetch games
+HS-0031,Kiki,Bird,Norwich Canary,8,0,F,Small,Medium,No,No,0,0,Yes,Pending,2024-11-19,No,Yes,"Loves meeting new people, Not good with cats"
+HS-0032,Baxter,Dog,Staffordshire Bull Terrier,10,0,M,Small,Very Low,No,Yes,1,1,True,Adopted,2025-01-19,No,No,Snuggle expert
+HS-0033,Simba,Dog,Komondor,0,2,F,Large,Very Low,Yes,Yes,1,0,0,Available,2025-02-27,Yes,No,"Separation anxiety, Mellow companion"
+HS-0034,Henry,Cat,LaPerm,5,0,F,Large,Low,Yes,No,0,True,False,Adopted,2025-02-02,Yes,Yes,Needs yard space
+HS-0035,Poppy,Bird,Palm Cockatoo,3,0,F,Large,Medium,Partial,Yes,1,1,0,Available,2025-04-16,Yes,Yes,"Selective with friends, Inquisitive explorer"
+HS-0036,Ranger,Bird,Congo African Grey,7,0,F,Small,Medium,Partial,Yes,No,0,True,Unavailable,2024-12-12,No,Yes,"Needs basic training, Loyal and devoted"
+HS-0037,Pixie,Reptile,African Bullfrog,5,0,M,Tiny,Low,No,Yes,1,True,True,Available,2025-05-01,Yes,In Progress,Inquisitive explorer
+HS-0038,Otis,Bird,Owl Finch,4,0,M,Small,High,Partial,Yes,False,False,True,Unavailable,2025-05-06,Yes,In Progress,"Quiet and reserved, High energy, needs exercise"
+HS-0039,Dexter,Small Animal,Dutch Rabbit,10,0,M,Tiny,High,No,Yes,True,False,True,Unavailable,2024-12-31,Yes,No,Very affectionate
+HS-0040,Blossom,Cat,Aegean,9,0,M,Large,Low,No,No,Yes,False,Yes,Unavailable,2024-12-10,No,Yes,"Good for first-time owners, High energy, needs exercise, Toy motivated"
+HS-0041,Rocky,Cat,Scottish Straight,4,0,F,Small,Medium,No,Yes,1,Yes,No,Available,2024-12-06,Yes,In Progress,"Calm and laid-back, Enjoys being held, Good with children"
+HS-0042,Sophie,Cat,Dragon Li,6,0,M,Small,Medium,Partial,No,Yes,0,False,Pending,2025-02-17,Yes,Yes,Separation anxiety
+HS-0043,Angel,Bird,Recessive Pied Budgie,6,0,F,Small,High,Yes,No,No,0,No,Adopted,2025-02-27,Yes,Yes,Sunbathing enthusiast
+HS-0044,Phoebe,Dog,Bull Terrier,2,0,M,Small,Very High,Partial,Yes,0,No,Yes,Available,2024-12-17,Yes,In Progress,"Not good with cats, Independent nature"
+HS-0045,Bear,Dog,Havanese,9,0,M,Large,Very Low,Partial,Yes,Yes,No,1,Adopted,2025-01-09,Yes,Yes,"Inquisitive explorer, Fearful of loud noises"
+HS-0046,Stella,Dog,Saint Bernard,0,3,F,Large,Low,No,No,1,1,0,Adopted,2024-12-30,Yes,In Progress,"Independent nature, Not good with dogs, Cautious with strangers"
+HS-0047,Max,Dog,Akita,5,0,M,Large,Low,No,No,0,0,1,Available,2025-01-27,Yes,No,"Prefers adults only, Chill and relaxed, Energetic player"
+HS-0048,Rufus,Reptile,Green Anole,6,0,M,Medium,Very Low,No,Yes,False,True,True,Pending,2025-01-16,Yes,No,Needs yard space
+HS-0049,Ellie,Small Animal,Ferret,1,0,M,Small,High,No,No,True,1,0,Pending,2025-04-03,No,In Progress,"Watches TV with you, Adventure buddy, Playful and curious"
+HS-0050,Misty,Dog,Poodle,10,0,F,Small,Very Low,Yes,Yes,No,1,Yes,Unavailable,2025-02-06,Yes,Yes,"Adventure buddy, Loves attention, Playful and curious"
+HS-0051,Coco,Reptile,Nile Monitor,3,0,F,X-Large,Very Low,Partial,No,0,True,False,Pending,2025-04-17,No,No,Perfect apartment pet
+HS-0052,Copper,Bird,Hyacinth Macaw,1,0,F,Large,Medium,Yes,Yes,1,True,Yes,Available,2025-04-10,No,Yes,"Vocal and expressive, Playful and curious, Not good with cats"
+HS-0053,Sammy,Small Animal,Angora Rabbit,7,0,F,Small,Very Low,No,Yes,Yes,0,0,Unavailable,2024-11-29,Yes,In Progress,"Good for first-time owners, Social with other animals, Inquisitive explorer"
+HS-0054,Hunter,Bird,Nanday Conure,6,0,M,Small,Very High,Yes,Yes,0,No,Yes,Available,2025-02-09,No,Yes,"Perfect apartment pet, Loves meeting new people"
+HS-0055,Bonnie,Dog,Saluki,7,0,M,Small,Very Low,No,No,0,False,1,Unavailable,2024-12-13,No,In Progress,"Enjoys being brushed, Perfect apartment pet"
+HS-0056,Sophie,Cat,Snowshoe,2,0,F,Large,Medium,No,No,Yes,True,False,Pending,2025-01-11,Yes,No,Shy but affectionate
+HS-0057,Rufus,Reptile,Diamondback Terrapin,9,0,M,Small,Very Low,No,No,False,Yes,True,Pending,2025-02-28,Yes,Yes,"Calm and laid-back, House trained"
+HS-0058,Emma,Cat,Himalayan,8,0,M,Medium,Medium,Partial,Yes,No,1,False,Available,2024-11-28,Yes,Yes,"Enjoys playtime, Experienced owner preferred"
+HS-0059,Willow,Dog,English Foxhound,5,0,M,Medium,Medium,Partial,Yes,False,False,Yes,Pending,2025-01-30,Yes,In Progress,"Selective with friends, Quiet and reserved"
+HS-0060,Maggie,Small Animal,Sheba Guinea Pig,6,0,M,Small,Very High,No,No,0,No,False,Unavailable,2025-02-26,No,Yes,"Snuggle expert, Energetic player"
+HS-0061,Chloe,Small Animal,Chinese Hamster,10,0,F,Small,High,Partial,No,Yes,Yes,True,Unavailable,2025-02-04,No,In Progress,Very affectionate
+HS-0062,Ellie,Bird,Nanday Conure,0,9,M,Tiny,High,Yes,No,1,No,0,Available,2025-04-23,No,Yes,"Calm and laid-back, Cautious with strangers, Social with other animals"
+HS-0063,Pepper,Bird,Recessive Pied Budgie,2,0,M,Small,Very High,Partial,Yes,False,No,0,Adopted,2024-12-14,Yes,Yes,"Prefers adults only, Calm and laid-back, Friendly and outgoing"
+HS-0064,Cooper,Reptile,Softshell Turtle,0,3,M,Tiny,Very Low,Partial,No,False,1,True,Adopted,2025-03-07,No,No,"Follows you everywhere, Intelligent and trainable, Mellow companion"
+HS-0065,Penny,Cat,Scottish Fold,10,0,M,Medium,Medium,No,No,False,No,Yes,Adopted,2024-12-03,No,Yes,"Energetic player, Inquisitive explorer"
+HS-0066,Precious,Bird,Brown-headed Parrot,5,0,M,Tiny,Medium,Partial,No,1,1,1,Pending,2025-01-17,Yes,Yes,Water-loving
+HS-0067,Maya,Bird,Fischer's Lovebird,3,0,F,Tiny,High,Yes,No,Yes,True,0,Pending,2024-12-05,Yes,No,Enjoys being held
+HS-0068,Precious,Cat,Somali,9,0,M,Medium,Low,No,Yes,1,1,Yes,Adopted,2025-04-26,Yes,In Progress,Crate trained
+HS-0069,Simba,Cat,Munchkin,2,0,M,Medium,Medium,Yes,Yes,Yes,False,1,Available,2025-01-26,No,In Progress,Energetic player
+HS-0070,Buddy,Bird,Spice Finch,6,0,F,Tiny,High,Partial,No,0,False,No,Adopted,2025-04-04,Yes,In Progress,"Enjoys fetch games, Anxious in new situations"
+HS-0071,Henry,Reptile,Spiny-tailed Iguana,1,0,F,Medium,Low,Yes,Yes,True,Yes,No,Pending,2025-01-01,No,Yes,"Confident and bold, Snuggle expert, Not good with cats"
+HS-0072,Bandit,Bird,Orange-winged Amazon,2,0,F,Small,Medium,No,Yes,0,True,Yes,Available,2025-03-01,Yes,No,"Separation anxiety, Well-trained and obedient"
+HS-0073,Dixie,Bird,Cockatiel Pearl,1,0,F,Small,Medium,No,No,1,No,No,Adopted,2025-03-11,No,No,"Gets along with other pets, Well-trained and obedient, Cautious with strangers"
+HS-0074,Ginger,Dog,Chihuahua,6,0,M,Tiny,Low,Yes,No,0,Yes,Yes,Available,2025-01-15,No,Yes,"Not good with cats, Social with other animals"
+HS-0075,Rex,Reptile,Colombian Tegu,5,0,M,Tiny,Very Low,Yes,No,0,0,False,Adopted,2025-04-09,Yes,In Progress,"Needs basic training, Perfect apartment pet, Enjoys fetch games"
+HS-0076,Cooper,Cat,Maine Coon,3,0,M,Small,Low,Partial,No,Yes,Yes,No,Adopted,2025-05-01,No,Yes,"Gets along with other pets, Timid, needs patience, Toy motivated"
+HS-0077,Roxy,Cat,Aegean,4,0,M,Medium,Medium,Partial,No,Yes,No,0,Unavailable,2025-01-05,No,No,"Confident and bold, Vocal and expressive"
+HS-0078,Duke,Cat,Domestic Longhair,8,0,F,Small,Medium,No,Yes,1,True,Yes,Available,2025-04-09,No,No,Enjoys walks
+HS-0079,Henry,Bird,Cockatiel Whiteface,9,0,F,Tiny,High,Yes,Yes,True,True,False,Pending,2025-01-26,Yes,In Progress,Crate trained
+HS-0080,Shadow,Bird,White-fronted Amazon,4,0,F,Small,High,Yes,No,True,1,True,Pending,2025-01-08,No,No,Inquisitive explorer
+HS-0081,Apollo,Bird,Norwich Canary,0,8,M,Tiny,Medium,Partial,No,Yes,True,1,Unavailable,2025-01-31,No,Yes,"Not good with cats, Shy but affectionate, Adventure buddy"
+HS-0082,Jax,Dog,Greater Swiss Mountain Dog,1,0,F,X-Large,Low,No,No,1,1,1,Available,2024-11-16,No,Yes,"Shy but affectionate, Water-loving"
+HS-0083,Oreo,Small Animal,Agouti Mouse,1,0,M,Small,Low,Partial,Yes,1,True,Yes,Pending,2024-12-22,Yes,In Progress,"Gets along with other pets, Playful and curious"
+HS-0084,Nala,Reptile,Leopard Gecko,2,0,F,Small,Low,No,No,True,True,Yes,Pending,2024-12-04,No,Yes,"Lap pet, Playful and curious"
+HS-0085,Ace,Reptile,Marbled Salamander,1,0,F,Small,Very Low,Yes,No,No,No,True,Pending,2024-11-15,Yes,In Progress,"Good with children, Loyal and devoted"
+HS-0086,Lady,Dog,Irish Terrier,2,0,M,Tiny,High,Partial,No,True,True,True,Adopted,2025-03-25,Yes,In Progress,"Food motivated, Enjoys fetch games"
+HS-0087,Willow,Small Animal,Chinese Hamster,1,0,F,Small,Medium,Partial,No,True,No,False,Adopted,2024-12-14,No,Yes,"Watches TV with you, Food motivated, Lap pet"
+HS-0088,Winston,Reptile,Softshell Turtle,6,0,M,Medium,Low,Yes,Yes,0,No,Yes,Adopted,2025-01-14,No,Yes,Needs yard space
+HS-0089,Max,Bird,Cockatiel Pearl,8,0,F,Tiny,Very High,Yes,Yes,False,No,Yes,Pending,2025-02-11,Yes,No,"Mellow companion, Chill and relaxed"
+HS-0090,Layla,Dog,Belgian Malinois,10,0,M,Large,High,No,No,0,True,Yes,Unavailable,2024-12-01,No,Yes,Cuddle buddy
+HS-0091,Stella,Reptile,Green Anole,4,0,F,Medium,Very Low,Partial,Yes,False,No,Yes,Pending,2024-11-24,Yes,In Progress,"Social with other animals, Snuggle expert, Good for first-time owners"
+HS-0092,Gus,Small Animal,Abyssinian Guinea Pig,0,1,F,Small,Very High,Yes,No,False,Yes,True,Pending,2025-04-03,Yes,In Progress,Quiet and reserved
+HS-0093,Apollo,Reptile,Pacman Frog,8,0,M,Tiny,Very Low,Yes,Yes,No,False,Yes,Pending,2025-04-21,Yes,Yes,Not good with cats
+HS-0094,Summer,Reptile,Greek Tortoise,4,0,M,Small,Low,Yes,No,Yes,1,0,Unavailable,2024-12-07,No,Yes,"Friendly and outgoing, Watches TV with you, Shy but affectionate"
+HS-0095,Copper,Reptile,Collared Lizard,9,0,F,Medium,Low,No,Yes,1,True,Yes,Adopted,2025-02-18,Yes,In Progress,Selective with friends
+HS-0096,Hunter,Cat,Ragdoll Tabby,5,0,M,Medium,Medium,No,Yes,0,1,0,Pending,2024-12-12,No,Yes,Snuggle expert
+HS-0097,Cooper,Small Animal,Manx Rat,8,0,F,Small,Very High,No,Yes,1,No,1,Pending,2024-12-05,Yes,No,Sunbathing enthusiast
+HS-0098,Lucy,Reptile,Tiger Salamander,3,0,M,Medium,Very Low,Partial,Yes,True,1,0,Adopted,2025-05-01,Yes,No,Confident and bold
+HS-0099,Max,Cat,Bombay,5,0,M,Medium,Low,No,No,True,False,1,Adopted,2025-03-10,No,Yes,Needs yard space
+HS-0100,Ace,Reptile,Clawed Frog,6,0,M,Small,Low,Partial,No,1,No,1,Available,2025-01-09,No,No,Enjoys playtime
