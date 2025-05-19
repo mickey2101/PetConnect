@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
 
+// Use the environment variable for API URL
 const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
 const HomePage = () => {
@@ -29,7 +30,8 @@ const HomePage = () => {
           if (value) queryParams.append(key, value);
         });
 
-        const url = `/api/animals/?${queryParams.toString()}`;
+        // Use the API_BASE_URL instead of hardcoded path
+        const url = `${API_BASE_URL}/animals/?${queryParams.toString()}`;
         console.log("Fetching:", url);
 
         const response = await fetch(url, {
