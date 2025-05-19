@@ -1,0 +1,392 @@
+/* recommendation_systels.css */
+
+/* Main container */
+.recommendations-container {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Header section */
+.recommendations-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recommendations-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.refresh-button, .reset-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.refresh-button:hover, .reset-button:hover {
+  transform: translateY(-2px);
+}
+
+.refresh-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.refresh-button:hover {
+  background-color: #1976D2;
+}
+
+.reset-button {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.reset-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Unified recommendations section */
+.unified-recommendations {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 22px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  color: #333;
+}
+
+/* All recommendations cards together */
+.all-recommendations-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Pet cards */
+.pet-card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Top recommendations get special styling */
+.top-recommendation {
+  border-top: 4px solid #4CAF50;
+}
+
+.standard-recommendation {
+  border-top: 4px solid #9E9E9E;
+}
+
+/* History-based recommendations */
+.history-based {
+  border-top: 4px solid #e74c3c;
+}
+
+.pet-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pet-card-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pet-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.pet-card:hover .pet-card-image img {
+  transform: scale(1.05);
+}
+
+/* Tags */
+.history-tag, .best-match-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  z-index: 1;
+}
+
+.history-tag {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.best-match-tag {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pet-card-content {
+  padding: 15px;
+}
+
+.pet-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.pet-breed {
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 5px 0;
+}
+
+.pet-details {
+  color: #777;
+  font-size: 14px;
+  margin: 0 0 15px 0;
+}
+
+/* Match indicators */
+.pet-match {
+  margin-top: 15px;
+}
+
+.match-indicator {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.match-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s;
+}
+
+/* Color based on position, not source */
+.blue .match-bar {
+  background-color: #2196F3;
+}
+
+.green .match-bar {
+  background-color: #4CAF50;
+}
+
+.gray .match-bar {
+  background-color: #9E9E9E;
+}
+
+/* Top 3 pets get blue bars regardless of source */
+.pet-card:nth-child(-n+3) .match-indicator .match-bar {
+  background-color: #2196F3;
+}
+
+/* Best match gets green bar */
+.pet-card:first-child .match-indicator .match-bar {
+  background-color: #4CAF50;
+}
+
+.match-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.recommendation-reason {
+  font-size: 13px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* No recommendations message */
+.no-recommendations {
+  padding: 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  color: #666;
+}
+
+/* Recently viewed section */
+.recently-viewed-container {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.recently-viewed-container h3 {
+  font-size: 22px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  color: #333;
+}
+
+.recently-viewed-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.recently-viewed-card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recently-viewed-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recently-viewed-card a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.recently-viewed-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.recently-viewed-info {
+  padding: 10px;
+}
+
+.recently-viewed-info .pet-name {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.recently-viewed-info .view-time {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Loading state */
+.recommendations-container.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2196F3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.recommendations-container.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #d32f2f;
+}
+
+.retry-button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Local source indicator */
+.local-source {
+  position: relative;
+}
+
+.local-source::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .all-recommendations-cards,
+  .recently-viewed-cards {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  .recommendations-subtitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .refresh-button, .reset-button {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .pet-card-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .all-recommendations-cards,
+  .recently-viewed-cards {
+    grid-template-columns: 1fr;
+  }
+}
