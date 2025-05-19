@@ -266,7 +266,7 @@ export const logAnimalView = async (animalId) => {
     });
     
     // Use the animals endpoint instead of recommendations
-    const response = await fetch('http://localhost:8000/api/animals/record-view/', {
+    const response = await fetch('https://petconnect-0a08.onrender.com/api/animals/record-view/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
