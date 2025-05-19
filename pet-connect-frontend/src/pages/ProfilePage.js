@@ -333,7 +333,7 @@ const ProfilePage = () => {
           <div className="activity-section">
             <button 
               className="view-history-button"
-              onClick={() => navigate('/history')}
+              onClick={() => navigate('/recommendations')}
             >
               View Browsing History
             </button>

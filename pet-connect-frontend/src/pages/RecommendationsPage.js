@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import apiService from '../utils/apiService';
+import getBreedImageUrl from '../utils/getBreedImageUrl';
 import { 
   logLocalAnimalView, 
   getLocalAnimalViews, 
@@ -461,7 +462,7 @@ const RecommendationsPage = () => {
                         onClick={() => handleAnimalClick(animal.id)}
                       >
                         <div className="pet-card-image">
-                          <img src={getImageUrl(animal)} alt={animal.name} />
+                          <img src={getBreedImageUrl(animal)} alt={animal.name} />
                           {index === 0 && <div className="best-match-tag">Best Match</div>}
                           {animal.source === 'history' && (
                             <div className="history-tag">Based on History</div>
@@ -525,7 +526,7 @@ const RecommendationsPage = () => {
                     to={`/animals/${animal.id}`}
                     onClick={() => handleAnimalClick(animal.id)}
                   >
-                    <img src={getImageUrl(animal)} alt={animal.name} />
+                    <img src={getBreedImageUrl(animal)} alt={animal.name} />
                     <div className="recently-viewed-info">
                       <span className="pet-name">{animal.name}</span>
                       <span className="view-time">
