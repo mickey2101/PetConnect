@@ -1,13 +1,13 @@
-// src/utils/simpleApi.js - Expanded for more endpoints
+// Updated simpleApi.js with authentication handling
 import { API_BASE_URL, isLocal } from './apiConfig';
 
 /**
- * Simple API service for making unauthenticated requests in production
- * Use this for endpoints that don't require authentication or when in production
+ * Simple API service with authentication fallback
+ * First tries without auth, then falls back to credentials if needed
  */
 const simpleApi = {
   /**
-   * Get animals list without authentication
+   * Get animals list with authentication fallback
    */
   getAnimals: async (filters = {}) => {
     try {
@@ -19,16 +19,57 @@ const simpleApi = {
         }
       });
       
-      // Make the request
-      console.log(`Fetching animals with simplified API call (no auth)`);
+      // First try without credentials in production
+      if (!isLocal()) {
+        try {
+          console.log(`Trying to fetch animals without auth`);
+          const response = await fetch(`${API_BASE_URL}/animals/?${queryParams.toString()}`, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            // No credentials to avoid CORS issues
+            credentials: 'omit'
+          });
+          
+          // If successful, return the data
+          if (response.ok) {
+            const data = await response.json();
+            // Check response format
+            if (Array.isArray(data)) {
+              return data;
+            } else if (data.animals && Array.isArray(data.animals)) {
+              return data.animals;
+            } else {
+              console.warn('Unexpected response format:', data);
+              return [];
+            }
+          }
+          
+          // If 403, try again with credentials
+          if (response.status === 403) {
+            console.log('Server requires authentication. Trying with credentials...');
+            // Fall through to the authenticated request
+          } else {
+            throw new Error(`HTTP error ${response.status}`);
+          }
+        } catch (noAuthError) {
+          console.warn('Failed to fetch without authentication:', noAuthError);
+          // Fall through to the authenticated request
+        }
+      }
+      
+      // If local or the no-auth request failed, use credentials
+      console.log(`Fetching animals with credentials`);
       const response = await fetch(`${API_BASE_URL}/animals/?${queryParams.toString()}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        // No credentials in production to avoid CORS issues
-        credentials: isLocal() ? 'include' : 'omit'
+        // Include credentials
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -53,18 +94,52 @@ const simpleApi = {
   },
 
   /**
-   * Get animal details without authentication
+   * Get animal details with authentication fallback
    */
   getAnimalDetails: async (animalId) => {
     try {
+      // First try without credentials in production
+      if (!isLocal()) {
+        try {
+          console.log(`Trying to fetch animal ${animalId} without auth`);
+          const response = await fetch(`${API_BASE_URL}/animals/${animalId}/`, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            // No credentials to avoid CORS issues
+            credentials: 'omit'
+          });
+          
+          // If successful, return the data
+          if (response.ok) {
+            return await response.json();
+          }
+          
+          // If 403, try again with credentials
+          if (response.status === 403) {
+            console.log('Server requires authentication. Trying with credentials...');
+            // Fall through to the authenticated request
+          } else {
+            throw new Error(`HTTP error ${response.status}`);
+          }
+        } catch (noAuthError) {
+          console.warn('Failed to fetch without authentication:', noAuthError);
+          // Fall through to the authenticated request
+        }
+      }
+      
+      // If local or the no-auth request failed, use credentials
+      console.log(`Fetching animal ${animalId} with credentials`);
       const response = await fetch(`${API_BASE_URL}/animals/${animalId}/`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        // No credentials in production to avoid CORS issues
-        credentials: isLocal() ? 'include' : 'omit'
+        // Include credentials
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -79,16 +154,49 @@ const simpleApi = {
   },
   
   /**
-   * Get recent animal views
+   * Get recent animal views with authentication fallback
    */
   getRecentViews: async (limit = 5) => {
     try {
+      // First try without credentials in production
+      if (!isLocal()) {
+        try {
+          console.log(`Trying to fetch recent views without auth`);
+          const response = await fetch(`${API_BASE_URL}/recommendations/recent-views/?limit=${limit}`, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json'
+            },
+            credentials: 'omit'
+          });
+          
+          // If successful, return the data
+          if (response.ok) {
+            const data = await response.json();
+            return data.recent_views || [];
+          }
+          
+          // If 403, use localStorage instead
+          if (response.status === 403) {
+            console.log('Server requires authentication for recent views.');
+            return [];
+          } else {
+            throw new Error(`HTTP error ${response.status}`);
+          }
+        } catch (noAuthError) {
+          console.warn('Failed to fetch recent views:', noAuthError);
+          return [];
+        }
+      }
+      
+      // If local environment, use credentials
+      console.log(`Fetching recent views with credentials`);
       const response = await fetch(`${API_BASE_URL}/recommendations/recent-views/?limit=${limit}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json'
         },
-        credentials: isLocal() ? 'include' : 'omit'
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -104,7 +212,7 @@ const simpleApi = {
   },
   
   /**
-   * Get recommendations for a user
+   * Get recommendations with authentication fallback
    */
   getRecommendations: async (options = {}) => {
     try {
@@ -116,12 +224,45 @@ const simpleApi = {
         }
       });
       
+      // First try without credentials in production
+      if (!isLocal()) {
+        try {
+          console.log(`Trying to fetch recommendations without auth`);
+          const response = await fetch(`${API_BASE_URL}/recommendations/?${queryParams.toString()}`, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json'
+            },
+            credentials: 'omit'
+          });
+          
+          // If successful, return the data
+          if (response.ok) {
+            const data = await response.json();
+            return data.recommendations || [];
+          }
+          
+          // If 403, try again with credentials
+          if (response.status === 403) {
+            console.log('Server requires authentication. Trying with credentials...');
+            // Fall through to the authenticated request
+          } else {
+            throw new Error(`HTTP error ${response.status}`);
+          }
+        } catch (noAuthError) {
+          console.warn('Failed to fetch without authentication:', noAuthError);
+          // Fall through to the authenticated request
+        }
+      }
+      
+      // If local or the no-auth request failed, use credentials
+      console.log(`Fetching recommendations with credentials`);
       const response = await fetch(`${API_BASE_URL}/recommendations/?${queryParams.toString()}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json'
         },
-        credentials: isLocal() ? 'include' : 'omit'
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -137,22 +278,17 @@ const simpleApi = {
   },
   
   /**
-   * Log an animal view (this is a write operation but doesn't necessarily need auth)
+   * Log an animal view (this is a write operation and will definitely need auth)
    */
   logAnimalView: async (animalId) => {
     try {
-      // For production, we might skip this server-side logging
-      if (!isLocal()) {
-        console.log('Skipping server-side view logging in production mode');
-        return { success: true };
-      }
-      
+      console.log(`Logging view for animal ${animalId} with auth`);
       const response = await fetch(`${API_BASE_URL}/animals/record-view/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include', // Need credentials for this one
+        credentials: 'include', // Always need credentials for this one
         body: JSON.stringify({ animal_id: animalId })
       });
       
