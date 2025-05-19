@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-8z6+v$1*v3l5&vk*dqpq8+rsz#65zn$1486v27gdh!v6!9(89y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['your-domain.onrender.com']  # Update for Render or custom domain
+ALLOWED_HOSTS = [
+    os.environ.get("RENDER_EXTERNAL_HOSTNAME", "127.0.0.1"),
+    "petconnect-0a08.onrender.com"  # add your actual Render domain
+]
 
 
 # Application definition
