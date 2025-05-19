@@ -1,9 +1,10 @@
 // src/utils/axiosConfig.js
 import axios from 'axios';
+import { API_BASE_URL } from './apiConfig';
 
-// Create an axios instance
+// Create an axios instance with dynamic base URL
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api/'  // Make sure this URL is correct
+  baseURL: API_BASE_URL
 });
 
 // Add request debugging
@@ -48,8 +49,9 @@ api.interceptors.response.use(
       url: error.config?.url,
       method: error.config?.method
     });
-    }
-)
+    return Promise.reject(error);
+  }
+);
 
 // Add a request interceptor
 api.interceptors.request.use(
@@ -80,7 +82,7 @@ api.interceptors.response.use(
       try {
         // Try to refresh the token
         const refreshToken = localStorage.getItem('refresh_token');
-        const response = await axios.post('http://localhost:8000/api/users/token/refresh/', {
+        const response = await axios.post(`${API_BASE_URL}/users/token/refresh/`, {
           refresh: refreshToken
         });
         

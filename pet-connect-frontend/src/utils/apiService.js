@@ -5,8 +5,7 @@
  */
 
 import { fetchWithCsrf } from './csrfUtils';
-
-const API_BASE_URL = '/api';
+import { getRelativeApiPath, API_BASE_URL } from './apiConfig';
 
 /**
  * API Methods for Recommendations
@@ -15,7 +14,7 @@ export const recommendationsApi = {
   getRecommendations: async ({ animalId = '', limit = 10 } = {}) => {
     try {
       const response = await fetchWithCsrf(
-        `${API_BASE_URL}/recommendations/?animal_id=${animalId}&limit=${limit}&_=${Date.now()}`,
+        `recommendations/?animal_id=${animalId}&limit=${limit}&_=${Date.now()}`,
         {
           method: 'GET',
           credentials: 'include',
@@ -37,7 +36,7 @@ export const recommendationsApi = {
   getRecentViews: async ({ limit = 5 } = {}) => {
     try {
       const response = await fetchWithCsrf(
-        `${API_BASE_URL}/recommendations/recent-views/?limit=${limit}&_=${Date.now()}`,
+        `recommendations/recent-views/?limit=${limit}&_=${Date.now()}`,
         {
           method: 'GET',
           credentials: 'include',
@@ -62,7 +61,7 @@ export const recommendationsApi = {
       formData.append('animal_id', animalId);
       formData.append('view_duration', viewDuration);
 
-      const response = await fetchWithCsrf(`${API_BASE_URL}/animals/record-view/`, {
+      const response = await fetchWithCsrf(`animals/record-view/`, {
         method: 'POST',
         body: formData,
         credentials: 'include',
@@ -102,7 +101,7 @@ export const animalsApi = {
       });
       
       const response = await fetchWithCsrf(
-        `${API_BASE_URL}/animals/?${queryParams.toString()}`
+        `animals/?${queryParams.toString()}`
       );
       
       if (!response.ok) {
@@ -125,11 +124,10 @@ export const animalsApi = {
    */
   getAnimalDetails: async (animalId) => {
     try {
-      const response = await fetchWithCsrf(`${API_BASE_URL}/animals/${animalId}/`, {
+      const response = await fetchWithCsrf(`animals/${animalId}/`, {
        method: 'GET',
        credentials: 'include'
-    });
-
+      });
       
       if (!response.ok) {
         throw new Error(`HTTP error ${response.status}`);
@@ -154,7 +152,7 @@ export const userApi = {
    */
   getUserPreferences: async () => {
     try {
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/preferences/`);
+      const response = await fetchWithCsrf(`users/preferences/`);
       
       if (!response.ok) {
         throw new Error(`HTTP error ${response.status}`);
@@ -175,7 +173,7 @@ export const userApi = {
    */
   updatePreferences: async (preferences) => {
     try {
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/preferences/`, {
+      const response = await fetchWithCsrf(`users/preferences/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -204,7 +202,7 @@ export const userApi = {
    */
   login: async ({ username, password }) => {
     try {
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/login/`, {
+      const response = await fetchWithCsrf(`users/login/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -230,7 +228,7 @@ export const userApi = {
    */
   logout: async () => {
     try {
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/logout/`, {
+      const response = await fetchWithCsrf(`users/logout/`, {
         method: 'POST'
       });
       
@@ -261,12 +259,12 @@ export const logAnimalView = async (animalId) => {
     console.log(`Attempting to log view for animal ${animalId} using animals endpoint...`);
     
     // First, ensure we have a CSRF token
-    await fetch('/api/csrf/', {
+    await fetch(getRelativeApiPath('csrf/'), {
       credentials: 'include'
     });
     
-    // Use the animals endpoint instead of recommendations
-    const response = await fetch('http://localhost:8000/api/animals/record-view/', {
+    // Use the proper endpoint with configurable base URL
+    const response = await fetch(getRelativeApiPath('animals/record-view/'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

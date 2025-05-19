@@ -1,4 +1,5 @@
 // Updated csrfUtils.js
+import { isLocal, getRelativeApiPath } from './apiConfig';
 
 /**
  * CSRF Token Utilities
@@ -50,7 +51,10 @@ export const getCsrfTokenFromCookie = () => {
  */
 export const fetchCsrfToken = async () => {
   try {
-    const response = await fetch('/api/recommendations/csrf-token/', {
+    // Use env-aware path
+    const csrfUrl = getRelativeApiPath('csrf/');
+    
+    const response = await fetch(csrfUrl, {
       method: 'GET',
       credentials: 'include' // Important for cookies
     });
@@ -99,8 +103,9 @@ export const applyCsrfToken = (options = {}) => {
 
 /**
  * Enhanced fetchWithCsrf that will try to get a token if one isn't available
+ * The path parameter can be a relative path like 'users/login/' or '/api/users/login/'
  */
-export const fetchWithCsrf = async (url, options = {}) => {
+export const fetchWithCsrf = async (path, options = {}) => {
   let token = getCsrfToken();
   
   // If no token found, try fetching one
@@ -125,17 +130,29 @@ export const fetchWithCsrf = async (url, options = {}) => {
     }
   };
   
-  // Log the request for debugging
+  // Process the URL based on the environment and format
+  let url = path;
+  
+  // If path starts with /api/, keep format but adapt to environment
+  if (path.startsWith('/api/')) {
+    const endpointPath = path.substring(5); // Remove /api/
+    url = getRelativeApiPath(endpointPath);
+  } 
+  // If it doesn't start with / or http, assume it's a relative API path
+  else if (!path.startsWith('/') && !path.startsWith('http')) {
+    url = getRelativeApiPath(path);
+  }
+  // Otherwise keep as is (absolute URL or non-API relative path)
+  
+  // Log request for debugging
   console.log('Making fetch request with CSRF token:', {
-    url,
+    originalPath: path,
+    processedUrl: url,
     method: optionsWithCsrf.method || 'GET',
-    headers: optionsWithCsrf.headers
   });
   
   return fetch(url, optionsWithCsrf);
 };
-
-
 
 /**
  * Initialize CSRF protection by fetching a token
