@@ -1,11 +1,9 @@
 // src/utils/axiosConfig.js
 import axios from 'axios';
-// Ensure API_BASE_URL doesn't end with a slash
-const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
 
 // Create an axios instance
 const api = axios.create({
-  baseURL: API_BASE_URL
+  baseURL: 'http://localhost:8000/api/'  // Make sure this URL is correct
 });
 
 // Add request debugging
@@ -82,7 +80,7 @@ api.interceptors.response.use(
       try {
         // Try to refresh the token
         const refreshToken = localStorage.getItem('refresh_token');
-        const response = await axios.post(`${API_BASE_URL}/users/token/refresh/`, {
+        const response = await axios.post('http://localhost:8000/api/users/token/refresh/', {
           refresh: refreshToken
         });
         

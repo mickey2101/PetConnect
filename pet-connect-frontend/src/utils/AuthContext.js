@@ -3,8 +3,6 @@ import { fetchWithCsrf } from './csrfUtils';
 
 // Create the AuthContext
 export const AuthContext = createContext(null);
-// Ensure API_BASE_URL doesn't end with a slash
-const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
 
 // Create the AuthProvider component
 export const AuthProvider = ({ children }) => {
@@ -29,7 +27,7 @@ export const AuthProvider = ({ children }) => {
       // Make a request to an endpoint that returns the current user info
       console.log(`Checking authentication status (attempt ${authCheckCount + 1})...`);
       
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/me/`);
+      const response = await fetchWithCsrf('/api/users/me/');
       
       if (response.ok) {
         const data = await response.json();
@@ -84,7 +82,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Call login API
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/login/`, {
+      const response = await fetchWithCsrf('/api/users/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -127,7 +125,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Call logout API
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/logout/`, {
+      const response = await fetchWithCsrf('/api/users/logout/', {
         method: 'POST'
       });
       
@@ -155,7 +153,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Make register API call
-      const response = await fetchWithCsrf(`${API_BASE_URL}/users/register/`, {
+      const response = await fetchWithCsrf('/api/users/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

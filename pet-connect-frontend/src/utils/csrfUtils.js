@@ -1,3 +1,5 @@
+// Updated csrfUtils.js
+
 /**
  * CSRF Token Utilities
  * -------------------
@@ -11,9 +13,6 @@
  * 
  * @returns {string|null} The CSRF token or null if not found
  */
-// Ensure API_BASE_URL doesn't end with a slash
-const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
-
 export const getCsrfToken = () => {
   // Look for the token in a meta tag
   const csrfMeta = document.querySelector('meta[name="csrf-token"]');
@@ -51,7 +50,7 @@ export const getCsrfTokenFromCookie = () => {
  */
 export const fetchCsrfToken = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/recommendations/csrf-token/`, {
+    const response = await fetch('/api/recommendations/csrf-token/', {
       method: 'GET',
       credentials: 'include' // Important for cookies
     });

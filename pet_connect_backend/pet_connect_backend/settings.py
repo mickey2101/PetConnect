@@ -29,7 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ.get("RENDER_EXTERNAL_HOSTNAME", "127.0.0.1"),
-    "petconnect-0a08.onrender.com"  # add your actual Render domain
+    "petconnect-0a08.onrender.com",
+    "localhost",
+    "127.0.0.1",
 ]
 
 
@@ -181,20 +183,23 @@ CSRF_COOKIE_SAMESITE = 'Lax'  # Use 'None' for cross-site requests with Secure=T
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://frontend:3000",
+    "https://petconnect-frontend.onrender.com",
+    # Add any other variations of your frontend URL
 ]
 CSRF_USE_SESSIONS = False  # Store CSRF token in cookie, not session
 CSRF_COOKIE_NAME = 'csrftoken'  # Default name
 
 # CORS Settings
-CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    "https://petconnect-frontend.onrender.com", # Add your frontend origins here
+    "http://localhost:3000",
+    "https://petconnect-frontend.onrender.com",
+    # Add any other variations of your frontend URL
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://frontend:3000",
     "https://petconnect-frontend.onrender.com",
+    # Add any other variations of your frontend URL
 ]
 CORS_ALLOW_METHODS = [
     'DELETE',

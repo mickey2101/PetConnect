@@ -6,8 +6,7 @@
 
 import { fetchWithCsrf } from './csrfUtils';
 
-// Ensure API_BASE_URL doesn't end with a slash
-const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
+const API_BASE_URL = '/api';
 
 /**
  * API Methods for Recommendations
@@ -262,12 +261,12 @@ export const logAnimalView = async (animalId) => {
     console.log(`Attempting to log view for animal ${animalId} using animals endpoint...`);
     
     // First, ensure we have a CSRF token
-    await fetch(`${API_BASE_URL}/csrf/`, {
+    await fetch('/api/csrf/', {
       credentials: 'include'
     });
     
     // Use the animals endpoint instead of recommendations
-    const response = await fetch(`${API_BASE_URL}/animals/record-view/`, {
+    const response = await fetch('http://localhost:8000/api/animals/record-view/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

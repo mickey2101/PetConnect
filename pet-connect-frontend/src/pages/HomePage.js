@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
 
-// Ensure API_BASE_URL doesn't end with a slash
-const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
 
 const HomePage = () => {
   const [animals, setAnimals] = useState([]);
@@ -30,8 +28,7 @@ const HomePage = () => {
           if (value) queryParams.append(key, value);
         });
 
-        // Use the API_BASE_URL instead of hardcoded path
-        const url = `${API_BASE_URL}/animals/?${queryParams.toString()}`;
+        const url = `/api/animals/?${queryParams.toString()}`;
         console.log("Fetching:", url);
 
         const response = await fetch(url, {
