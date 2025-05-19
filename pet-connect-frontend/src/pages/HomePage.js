@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
 
-// Use the environment variable for API URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+// Ensure API_BASE_URL doesn't end with a slash
+const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
 
 const HomePage = () => {
   const [animals, setAnimals] = useState([]);

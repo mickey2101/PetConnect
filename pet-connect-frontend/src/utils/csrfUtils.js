@@ -1,5 +1,3 @@
-// Updated csrfUtils.js
-
 /**
  * CSRF Token Utilities
  * -------------------
@@ -13,7 +11,8 @@
  * 
  * @returns {string|null} The CSRF token or null if not found
  */
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+// Ensure API_BASE_URL doesn't end with a slash
+const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
 
 export const getCsrfToken = () => {
   // Look for the token in a meta tag

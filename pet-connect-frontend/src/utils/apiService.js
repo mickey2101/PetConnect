@@ -6,7 +6,8 @@
 
 import { fetchWithCsrf } from './csrfUtils';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+// Ensure API_BASE_URL doesn't end with a slash
+const API_BASE_URL = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.replace(/\/$/, '') : '/api';
 
 /**
  * API Methods for Recommendations
