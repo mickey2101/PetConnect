@@ -1,18 +1,12 @@
-// Updated csrfUtils.js
-import { isLocal, getRelativeApiPath } from './apiConfig';
+// Updated csrfUtils.js - Frontend-only fix
+import { isLocal, getRelativeApiPath, API_BASE_URL, ENV, CURRENT_ENV } from './apiConfig';
 
 /**
- * CSRF Token Utilities
- * -------------------
- * Handles getting and applying CSRF tokens for API requests
- * 
- * Author: Macayla van der Merwe
+ * CSRF Token Utilities with CORS production fixes (frontend only)
  */
 
 /**
  * Get the CSRF token from the page
- * 
- * @returns {string|null} The CSRF token or null if not found
  */
 export const getCsrfToken = () => {
   // Look for the token in a meta tag
@@ -27,8 +21,6 @@ export const getCsrfToken = () => {
 
 /**
  * Extract CSRF token from cookies
- * 
- * @returns {string|null} The CSRF token or null if not found
  */
 export const getCsrfTokenFromCookie = () => {
   if (document.cookie && document.cookie !== '') {
@@ -46,8 +38,6 @@ export const getCsrfTokenFromCookie = () => {
 
 /**
  * Fetch a new CSRF token from the server
- * 
- * @returns {Promise<string>} The fetched CSRF token
  */
 export const fetchCsrfToken = async () => {
   try {
@@ -56,7 +46,8 @@ export const fetchCsrfToken = async () => {
     
     const response = await fetch(csrfUrl, {
       method: 'GET',
-      credentials: 'include' // Important for cookies
+      // For production, avoid credentials for this call to prevent CORS issues
+      credentials: isLocal() ? 'include' : 'omit'
     });
     
     if (!response.ok) {
@@ -74,9 +65,6 @@ export const fetchCsrfToken = async () => {
 
 /**
  * Apply CSRF token to a fetch options object
- * 
- * @param {Object} options - Fetch options object
- * @returns {Object} Updated options with CSRF headers
  */
 export const applyCsrfToken = (options = {}) => {
   const token = getCsrfToken();
@@ -92,7 +80,7 @@ export const applyCsrfToken = (options = {}) => {
   // Add CSRF token to headers
   return {
     ...options,
-    credentials: 'include', // Include cookies with request
+    credentials: isLocal() ? 'include' : 'omit', // Only include credentials in local mode
     headers: {
       ...headers,
       'X-CSRFToken': token,
@@ -102,14 +90,14 @@ export const applyCsrfToken = (options = {}) => {
 };
 
 /**
- * Enhanced fetchWithCsrf that will try to get a token if one isn't available
- * The path parameter can be a relative path like 'users/login/' or '/api/users/login/'
+ * Enhanced fetchWithCsrf with CORS production workarounds
  */
 export const fetchWithCsrf = async (path, options = {}) => {
+  // Get token (primarily for local development)
   let token = getCsrfToken();
   
   // If no token found, try fetching one
-  if (!token) {
+  if (!token && isLocal()) {
     console.log('No CSRF token found, fetching a new one');
     token = await fetchCsrfToken();
     
@@ -119,10 +107,11 @@ export const fetchWithCsrf = async (path, options = {}) => {
     }
   }
   
-  // Create options with the token
+  // Prepare options with token for local mode
+  // For production, avoid sending credentials which cause CORS issues
   const optionsWithCsrf = {
     ...options,
-    credentials: 'include',
+    credentials: isLocal() ? 'include' : 'omit', // Key change for production
     headers: {
       ...(options.headers || {}),
       'X-CSRFToken': token || '',
@@ -142,13 +131,14 @@ export const fetchWithCsrf = async (path, options = {}) => {
   else if (!path.startsWith('/') && !path.startsWith('http')) {
     url = getRelativeApiPath(path);
   }
-  // Otherwise keep as is (absolute URL or non-API relative path)
   
   // Log request for debugging
   console.log('Making fetch request with CSRF token:', {
     originalPath: path,
     processedUrl: url,
     method: optionsWithCsrf.method || 'GET',
+    environment: CURRENT_ENV,
+    credentials: optionsWithCsrf.credentials
   });
   
   return fetch(url, optionsWithCsrf);
@@ -159,6 +149,12 @@ export const fetchWithCsrf = async (path, options = {}) => {
  * Call this function when your app initializes
  */
 export const initializeCsrf = async () => {
+  // Only fetch CSRF token in local mode
+  if (!isLocal()) {
+    console.log('Skipping CSRF initialization in production mode to avoid CORS issues');
+    return true;
+  }
+  
   try {
     const token = await fetchCsrfToken();
     console.log('CSRF protection initialized', token ? 'successfully' : 'failed');
