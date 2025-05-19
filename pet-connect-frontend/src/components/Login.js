@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../utils/AuthContext';
-import { isProduction } from '../utils/apiConfig';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +13,7 @@ const Login = () => {
   
   const navigate = useNavigate();
   const location = useLocation();
-  const { login, currentUser } = useAuth();
+  const { login, currentUser, isProduction } = useAuth();
   
   // Get the redirect URL from location state or default to home
   const from = location.state?.from?.pathname || '/';
@@ -71,8 +70,8 @@ const Login = () => {
       <div className="login-card">
         <h2>Login to Pet Connect</h2>
         
-        {/* Show production warning if in production */}
-        {isProduction() && (
+        {/* Show production notice and demo credentials */}
+        {isProduction && (
           <div className="environment-notice" style={{
             padding: '10px', 
             margin: '10px 0', 
@@ -81,7 +80,10 @@ const Login = () => {
             border: '1px solid #ffeeba',
             color: '#856404'
           }}>
-            <p><strong>Note:</strong> Login functionality may be limited in the production environment due to CORS restrictions. For full functionality, please use the local version.</p>
+            <p><strong>Production Mode:</strong> Use these demo credentials:</p>
+            <p style={{ marginBottom: '4px' }}><strong>Username:</strong> demo</p>
+            <p style={{ marginBottom: '4px' }}><strong>Password:</strong> demopassword</p>
+            <p className="credentials-note" style={{ fontSize: '12px', marginTop: '8px' }}>For full functionality with your own account, please use the local version.</p>
           </div>
         )}
         
