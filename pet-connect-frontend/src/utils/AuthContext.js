@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import { fetchWithCsrf } from './csrfUtils';
+import { API_BASE_URL, isProduction } from './apiConfig';
 
 // Create the AuthContext
 export const AuthContext = createContext(null);
@@ -11,6 +12,29 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [initialized, setInitialized] = useState(false);
   const [authCheckCount, setAuthCheckCount] = useState(0);
+  
+  // In production, we'll use localStorage as a fallback to maintain session
+  const [localUserData, setLocalUserData] = useState(() => {
+    if (isProduction()) {
+      const savedUser = localStorage.getItem('petconnect_user');
+      if (savedUser) {
+        try {
+          return JSON.parse(savedUser);
+        } catch (e) {
+          console.error('Failed to parse saved user data', e);
+          return null;
+        }
+      }
+    }
+    return null;
+  });
+  
+  // Save user data to localStorage in production
+  useEffect(() => {
+    if (isProduction() && currentUser) {
+      localStorage.setItem('petconnect_user', JSON.stringify(currentUser));
+    }
+  }, [currentUser]);
 
   // Function to check if user is logged in
   const checkAuthStatus = useCallback(async () => {
@@ -19,7 +43,22 @@ export const AuthProvider = ({ children }) => {
       console.warn("Auth check attempted too many times, aborting.");
       setLoading(false);
       setInitialized(true);
+      
+      // In production, use the localStorage backup if available
+      if (isProduction() && localUserData) {
+        console.log("Using stored user data in production");
+        setCurrentUser(localUserData);
+      }
+      
       return false;
+    }
+    
+    // In production, use localStorage data first and avoid excessive API calls
+    if (isProduction() && localUserData && initialized) {
+      console.log("Using cached user data in production");
+      setCurrentUser(localUserData);
+      setLoading(false);
+      return true;
     }
     
     try {
@@ -27,12 +66,18 @@ export const AuthProvider = ({ children }) => {
       // Make a request to an endpoint that returns the current user info
       console.log(`Checking authentication status (attempt ${authCheckCount + 1})...`);
       
-      const response = await fetchWithCsrf('/api/users/me/');
+      const response = await fetchWithCsrf('users/me/');
       
       if (response.ok) {
         const data = await response.json();
         console.log("Auth check success, user:", data);
         setCurrentUser(data);
+        
+        // In production, also update localStorage
+        if (isProduction()) {
+          setLocalUserData(data);
+        }
+        
         setError(null);
         setAuthCheckCount(0); // Reset counter on success
         return true;
@@ -40,7 +85,19 @@ export const AuthProvider = ({ children }) => {
         // If 401/403, user is not authenticated - this is normal
         if (response.status === 401 || response.status === 403) {
           console.log("Auth check: Not authenticated");
+          
+          // In production, check if we have localStorage data before clearing
+          if (isProduction() && localUserData) {
+            console.log("Using stored user data despite auth failure");
+            setCurrentUser(localUserData);
+            setError(null);
+            setAuthCheckCount(0);
+            return true;
+          }
+          
+          // Otherwise clear user data
           setCurrentUser(null);
+          setLocalUserData(null);
           setError(null);
           setAuthCheckCount(0); // Reset counter
           return false;
@@ -54,6 +111,14 @@ export const AuthProvider = ({ children }) => {
             console.error("Failed to parse error response:", e);
             setError('Authentication check failed');
           }
+          
+          // In production, keep using localStorage data if available
+          if (isProduction() && localUserData) {
+            console.log("Using stored user data despite auth error");
+            setCurrentUser(localUserData);
+            return true;
+          }
+          
           setCurrentUser(null);
           setAuthCheckCount(prev => prev + 1); // Increment counter
           return false;
@@ -62,6 +127,15 @@ export const AuthProvider = ({ children }) => {
     } catch (err) {
       console.error('Error checking authentication status:', err);
       setError('Authentication check failed. Please try again later.');
+      
+      // In production, keep using localStorage data if available
+      if (isProduction() && localUserData) {
+        console.log("Using stored user data despite network error");
+        setCurrentUser(localUserData);
+        setLoading(false);
+        return true;
+      }
+      
       setCurrentUser(null);
       setAuthCheckCount(prev => prev + 1); // Increment counter
       return false;
@@ -69,11 +143,24 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
       setInitialized(true);
     }
-  }, [authCheckCount]);
+  }, [authCheckCount, initialized, localUserData]);
 
   // Check auth status when component mounts
   useEffect(() => {
     checkAuthStatus();
+    
+    // In production, set up a less frequent auth check
+    let interval;
+    if (isProduction()) {
+      // Check every 5 minutes in production to reduce auth calls
+      interval = setInterval(() => {
+        checkAuthStatus();
+      }, 300000); // 5 minutes
+    }
+    
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, [checkAuthStatus]);
 
   // Login function
@@ -81,8 +168,9 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
       
-      // Call login API
-      const response = await fetchWithCsrf('/api/users/login/', {
+      // Call login API with environment-aware fetching
+      console.log("Attempting login with username:", username);
+      const response = await fetchWithCsrf('users/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -106,6 +194,12 @@ export const AuthProvider = ({ children }) => {
       
       // Set current user
       setCurrentUser(data);
+      
+      // In production, also update localStorage
+      if (isProduction()) {
+        setLocalUserData(data);
+      }
+      
       setError(null);
       setAuthCheckCount(0); // Reset counter on successful login
       
@@ -125,12 +219,18 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Call logout API
-      const response = await fetchWithCsrf('/api/users/logout/', {
+      const response = await fetchWithCsrf('users/logout/', {
         method: 'POST'
       });
       
-      // Clear current user regardless of response
+      // Clear current user and localStorage
       setCurrentUser(null);
+      
+      if (isProduction()) {
+        localStorage.removeItem('petconnect_user');
+        setLocalUserData(null);
+      }
+      
       setError(null);
       setAuthCheckCount(0); // Reset counter on logout
       
@@ -141,6 +241,12 @@ export const AuthProvider = ({ children }) => {
       console.error('Logout error:', err);
       // Still clear the user even if there's an error
       setCurrentUser(null);
+      
+      if (isProduction()) {
+        localStorage.removeItem('petconnect_user');
+        setLocalUserData(null);
+      }
+      
       setError(err.message || 'Logout failed. Please try again.');
     } finally {
       setLoading(false);
@@ -153,7 +259,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Make register API call
-      const response = await fetchWithCsrf('/api/users/register/', {
+      const response = await fetchWithCsrf('users/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -178,6 +284,12 @@ export const AuthProvider = ({ children }) => {
       // Set current user if registration auto-logs in
       if (data) {
         setCurrentUser(data);
+        
+        // In production, also update localStorage
+        if (isProduction()) {
+          setLocalUserData(data);
+        }
+        
         setAuthCheckCount(0); // Reset counter on successful registration
       }
       
@@ -201,7 +313,8 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     register,
-    checkAuthStatus
+    checkAuthStatus,
+    isProduction: isProduction() // Export for components that need to know the environment
   };
 
   return (

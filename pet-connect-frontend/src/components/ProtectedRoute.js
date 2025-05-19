@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../utils/AuthContext';
+import { isProduction } from '../utils/apiConfig';
 
 /**
  * Protected route component that redirects to login if user is not authenticated
+ * Enhanced to work with persistent sessions in production
  */
 const ProtectedRoute = ({ children }) => {
   const { currentUser, loading, initialized, checkAuthStatus } = useAuth();
@@ -12,10 +14,18 @@ const ProtectedRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [checkCount, setCheckCount] = useState(0);
   
-  // Force a single recheck of authentication status when the component mounts
+  // Production optimization - if we have currentUser from localStorage, trust it
   useEffect(() => {
+    if (isProduction() && currentUser) {
+      console.log("Protected route: Using cached user auth in production");
+      setIsAuthenticated(true);
+      setAuthChecked(true);
+      return;
+    }
+    
+    // Otherwise, verify auth
     const verifyAuth = async () => {
-      // Only check once when we mount
+      // Only check once when we mount or if not checked yet
       if (!authChecked && checkCount < 2) {
         console.log("Protected route: Checking auth status");
         
@@ -33,7 +43,7 @@ const ProtectedRoute = ({ children }) => {
     };
     
     verifyAuth();
-  }, [authChecked, checkAuthStatus, checkCount]);
+  }, [authChecked, checkAuthStatus, checkCount, currentUser]);
   
   // Show loading spinner while checking authentication
   if (loading && !authChecked) {
@@ -70,6 +80,11 @@ const ProtectedRoute = ({ children }) => {
         `}</style>
       </div>
     );
+  }
+  
+  // Optimization: In production with a user, skip auth checks
+  if (isProduction() && currentUser) {
+    return children;
   }
   
   // If auth check is complete and user is not authenticated, redirect to login
