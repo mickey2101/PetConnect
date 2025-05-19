@@ -1,9 +1,10 @@
 // src/utils/axiosConfig.js
 import axios from 'axios';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api/';
 
 // Create an axios instance
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api/'  // Make sure this URL is correct
+  baseURL: API_BASE_URL
 });
 
 // Add request debugging

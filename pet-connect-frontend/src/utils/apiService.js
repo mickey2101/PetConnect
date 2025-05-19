@@ -6,7 +6,7 @@
 
 import { fetchWithCsrf } from './csrfUtils';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
 /**
  * API Methods for Recommendations
