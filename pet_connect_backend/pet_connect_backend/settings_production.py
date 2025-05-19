@@ -9,7 +9,7 @@ from .settings import *
 DEBUG = False
 
 # Allow all hosts - update with your specific domain in production
-ALLOWED_HOSTS = ['https://petconnect-production-a6f2.up.railway.app/', '*']
+ALLOWED_HOSTS = ['petconnect-production-a6f2.up.railway.app/', '*']
 
 # Static files configuration
 STATIC_URL = '/static/'
