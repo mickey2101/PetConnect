@@ -188,12 +188,13 @@ CSRF_COOKIE_NAME = 'csrftoken'  # Default name
 # CORS Settings
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',  # Add your frontend origins here
+    'http://localhost:3000',
+    "https://petconnect-frontend.onrender.com", # Add your frontend origins here
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://frontend:3000",
-    "https://petconnect-frontend.onrender.com"
+    "https://petconnect-frontend.onrender.com",
 ]
 CORS_ALLOW_METHODS = [
     'DELETE',
