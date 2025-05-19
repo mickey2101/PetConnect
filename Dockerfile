@@ -21,12 +21,15 @@ COPY pet_connect_backend/ /app/
 
 # Create a local_settings.py file to override settings
 RUN echo "# local_settings.py - Override settings" > /app/pet_connect_backend/local_settings.py
+RUN echo "import os" >> /app/pet_connect_backend/local_settings.py
+RUN echo "from django.conf import settings" >> /app/pet_connect_backend/local_settings.py
+RUN echo "" >> /app/pet_connect_backend/local_settings.py
+RUN echo "# Update ALLOWED_HOSTS" >> /app/pet_connect_backend/local_settings.py
 RUN echo "ALLOWED_HOSTS = ['*', 'petconnect-production-a6f2.up.railway.app']" >> /app/pet_connect_backend/local_settings.py
 RUN echo "DEBUG = True" >> /app/pet_connect_backend/local_settings.py
 RUN echo "" >> /app/pet_connect_backend/local_settings.py
 RUN echo "# Configure templates to find the React app" >> /app/pet_connect_backend/local_settings.py
-RUN echo "import os" >> /app/pet_connect_backend/local_settings.py
-RUN echo "TEMPLATES[0]['DIRS'] = [" >> /app/pet_connect_backend/local_settings.py
+RUN echo "settings.TEMPLATES[0]['DIRS'] = [" >> /app/pet_connect_backend/local_settings.py
 RUN echo "    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'frontend_build')," >> /app/pet_connect_backend/local_settings.py
 RUN echo "]" >> /app/pet_connect_backend/local_settings.py
 RUN echo "" >> /app/pet_connect_backend/local_settings.py
@@ -38,22 +41,24 @@ RUN echo "    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'frontend
 RUN echo "]" >> /app/pet_connect_backend/local_settings.py
 RUN echo "" >> /app/pet_connect_backend/local_settings.py
 RUN echo "# Add whitenoise middleware for static files" >> /app/pet_connect_backend/local_settings.py
-RUN echo "if 'whitenoise.middleware.WhiteNoiseMiddleware' not in MIDDLEWARE:" >> /app/pet_connect_backend/local_settings.py
-RUN echo "    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')" >> /app/pet_connect_backend/local_settings.py
+RUN echo "if 'whitenoise.middleware.WhiteNoiseMiddleware' not in settings.MIDDLEWARE:" >> /app/pet_connect_backend/local_settings.py
+RUN echo "    settings.MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')" >> /app/pet_connect_backend/local_settings.py
 RUN echo "" >> /app/pet_connect_backend/local_settings.py
-RUN echo "# URL Configuration to serve React frontend for all non-API routes" >> /app/pet_connect_backend/local_settings.py
-RUN echo "from django.urls import re_path" >> /app/pet_connect_backend/local_settings.py
-RUN echo "from django.views.generic import TemplateView" >> /app/pet_connect_backend/local_settings.py
-RUN echo "from django.urls import path" >> /app/pet_connect_backend/local_settings.py
-RUN echo "from pet_connect_backend.urls import urlpatterns" >> /app/pet_connect_backend/local_settings.py
-RUN echo "" >> /app/pet_connect_backend/local_settings.py
-RUN echo "# Add catch-all route for React frontend" >> /app/pet_connect_backend/local_settings.py
-RUN echo "urlpatterns += [" >> /app/pet_connect_backend/local_settings.py
-RUN echo "    re_path(r'^(?!api/|admin/).*$', TemplateView.as_view(template_name='index.html'))," >> /app/pet_connect_backend/local_settings.py
-RUN echo "]" >> /app/pet_connect_backend/local_settings.py
 
-# Import local_settings at the end of the main settings file
+# Create a direct URLs patch file
+RUN echo "# Add this to the end of pet_connect_backend/urls.py" > /app/frontend_urls.py
+RUN echo "" >> /app/frontend_urls.py
+RUN echo "from django.urls import re_path" >> /app/frontend_urls.py
+RUN echo "from django.views.generic import TemplateView" >> /app/frontend_urls.py
+RUN echo "" >> /app/frontend_urls.py
+RUN echo "# Add React frontend catchall route" >> /app/frontend_urls.py
+RUN echo "urlpatterns += [" >> /app/frontend_urls.py
+RUN echo "    re_path(r'^(?!api/|admin/).*$', TemplateView.as_view(template_name='index.html'))," >> /app/frontend_urls.py
+RUN echo "]" >> /app/frontend_urls.py
+
+# Import local_settings at the end of the main settings file and add frontend_urls patch
 RUN echo "\n# Import local settings\ntry:\n    from .local_settings import *\nexcept ImportError:\n    pass" >> /app/pet_connect_backend/settings.py
+RUN cat /app/frontend_urls.py >> /app/pet_connect_backend/urls.py
 
 # Create a simple test index.html in case React build fails
 RUN mkdir -p /app/frontend_build
@@ -78,6 +83,7 @@ RUN echo "    return HttpResponse('<h1>Django is running!</h1><p>This test view 
 
 # Add test URL to main URLs file
 RUN echo "\n# Import test view" >> /app/pet_connect_backend/urls.py
+RUN echo "from django.urls import path" >> /app/pet_connect_backend/urls.py
 RUN echo "from pet_connect_backend.test_views import test_view" >> /app/pet_connect_backend/urls.py
 RUN echo "\n# Add test URL" >> /app/pet_connect_backend/urls.py
 RUN echo "urlpatterns.append(path('django-test/', test_view, name='test_view'))" >> /app/pet_connect_backend/urls.py
@@ -88,6 +94,7 @@ COPY --from=frontend-build /app/frontend/build/ /app/frontend_build/
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV DEBUG=1
 ENV PORT=8000
 
 # Create a verbose startup script
