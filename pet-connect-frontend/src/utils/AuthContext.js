@@ -3,6 +3,7 @@ import { fetchWithCsrf } from './csrfUtils';
 
 // Create the AuthContext
 export const AuthContext = createContext(null);
+const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
 // Create the AuthProvider component
 export const AuthProvider = ({ children }) => {

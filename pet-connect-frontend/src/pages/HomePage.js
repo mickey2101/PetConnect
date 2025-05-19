@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
 const HomePage = () => {
   const [animals, setAnimals] = useState([]);
