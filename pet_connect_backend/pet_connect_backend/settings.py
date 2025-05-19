@@ -193,6 +193,7 @@ CORS_ORIGIN_WHITELIST = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://frontend:3000",
+    "https://petconnect-frontend.onrender.com"
 ]
 CORS_ALLOW_METHODS = [
     'DELETE',
