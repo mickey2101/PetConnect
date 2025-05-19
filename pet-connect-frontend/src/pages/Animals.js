@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getBreedImageUrl from '../utils/getBreedImageUrl';
+import { fetchWithCsrf } from '../utils/csrfUtils';
 
 const Animals = () => {
   const [animals, setAnimals] = useState([]);
@@ -27,10 +28,9 @@ const Animals = () => {
           if (value) queryParams.append(key, value);
         });
 
-        const url = `/api/animals/?${queryParams.toString()}`;
-        console.log("Fetching:", url);
-
-        const response = await fetch(url, {
+        // Use fetchWithCsrf instead of direct fetch to handle environments
+        console.log("Fetching animals with filters:", filters);
+        const response = await fetchWithCsrf(`animals/?${queryParams.toString()}`, {
           credentials: "include",
         });
 
@@ -39,6 +39,9 @@ const Animals = () => {
 
         if (Array.isArray(data)) {
           setAnimals(data);
+        } else if (data.animals && Array.isArray(data.animals)) {
+          // Check for data in 'animals' property
+          setAnimals(data.animals);
         } else {
           console.warn('Unexpected format:', data);
           setAnimals([]);
@@ -53,7 +56,6 @@ const Animals = () => {
         setLoading(false);
       }
     };
-
 
     fetchAnimals();
   }, [filters]);
