@@ -261,12 +261,12 @@ export const logAnimalView = async (animalId) => {
     console.log(`Attempting to log view for animal ${animalId} using animals endpoint...`);
     
     // First, ensure we have a CSRF token
-    await fetch('/api/csrf/', {
+    await fetch(`${API_BASE_URL}/csrf/`, {
       credentials: 'include'
     });
     
     // Use the animals endpoint instead of recommendations
-    const response = await fetch('https://petconnect-0a08.onrender.com/api/animals/record-view/', {
+    const response = await fetch(`${API_BASE_URL}/animals/record-view/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

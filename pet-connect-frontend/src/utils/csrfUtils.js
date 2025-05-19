@@ -52,7 +52,7 @@ export const getCsrfTokenFromCookie = () => {
  */
 export const fetchCsrfToken = async () => {
   try {
-    const response = await fetch('/api/recommendations/csrf-token/', {
+    const response = await fetch(`${API_BASE_URL}/recommendations/csrf-token/`, {
       method: 'GET',
       credentials: 'include' // Important for cookies
     });

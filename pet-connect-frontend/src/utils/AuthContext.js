@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
       // Make a request to an endpoint that returns the current user info
       console.log(`Checking authentication status (attempt ${authCheckCount + 1})...`);
       
-      const response = await fetchWithCsrf('https://petconnect-0a08.onrender.com/api/users/me/');
+      const response = await fetchWithCsrf(`${API_BASE_URL}/users/me/`);
       
       if (response.ok) {
         const data = await response.json();
@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Call login API
-      const response = await fetchWithCsrf('https://petconnect-0a08.onrender.com/api/users/login/', {
+      const response = await fetchWithCsrf(`${API_BASE_URL}/users/login/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -126,7 +126,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Call logout API
-      const response = await fetchWithCsrf('https://petconnect-0a08.onrender.com/api/users/logout/', {
+      const response = await fetchWithCsrf(`${API_BASE_URL}/users/logout/`, {
         method: 'POST'
       });
       
@@ -154,7 +154,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       
       // Make register API call
-      const response = await fetchWithCsrf('https://petconnect-0a08.onrender.com/api/users/register/', {
+      const response = await fetchWithCsrf(`${API_BASE_URL}/users/register/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
